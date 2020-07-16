@@ -26,7 +26,7 @@ public class CommonController {
 		}
 		
 		if(logout != null) {
-			model.addAttribute("logout", "Logout!!");
+			model.addAttribute("logout ", "Logout!!");
 		}
 		
 	}

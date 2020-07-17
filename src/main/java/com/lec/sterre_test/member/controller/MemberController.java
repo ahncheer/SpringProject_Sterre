@@ -30,7 +30,7 @@ public class MemberController {
 	
 	public MemberController() {
 		super();
-		System.out.println("MoardController() 생성");
+		System.out.println("MemberController() 생성");
 	}
 	
 	@Autowired
@@ -39,11 +39,11 @@ public class MemberController {
 		C.sqlSession = sqlSession;
 	}
 
-	@RequestMapping("/memlist")
+	@RequestMapping("/memList")
 	public String list(Model model) {
 		command = new MListCommand();
 		command.execute(model);
-		return "member/memlist";
+		return "member/memList";
 	}
 	
 //	@RequestMapping("/memwrite")
@@ -60,32 +60,32 @@ public class MemberController {
 //		return "member/memwriteOk";
 	}
 	
-	@RequestMapping("/memview")
+	@RequestMapping("/memView")
 	public String view(int useruid, Model model) {
 		model.addAttribute("useruid", useruid);
 		new MViewCommand().execute(model);
-		return "member/memview";
+		return "member/memView";
 	}
 	
-	@RequestMapping("/memupdate")
+	@RequestMapping("/memUpdate")
 	public void update(int useruid, Model model) {
 		model.addAttribute("useruid", useruid);
 		new MSelectCommand().execute(model);
 //		return "member/update";
 	}
 	
-	@RequestMapping(value = "/memupdateOk", method = RequestMethod.POST)
+	@RequestMapping(value = "/memUpdateOk", method = RequestMethod.POST)
 	public String updateOk(MWriteDTO dto, Model model) {
 		model.addAttribute("dto", dto);
 		new MUpdateCommand().execute(model);
-		return "member/memupdateOk";
+		return "member/memUpdateOk";
 	}
 	
-	@RequestMapping("/memdeleteOk")
+	@RequestMapping("/memDeleteOk")
 	public String deleteOk(int useruid, Model model) {
 		model.addAttribute("useruid", useruid);
 		new MDeleteCommand().execute(model);
-		return "member/memdeleteOk";
+		return "member/memDeleteOk";
 	}
 	
 	

@@ -18,39 +18,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>수정 ${list[0].subject }</title>
+<title>${list[0].username } 프로필 수정</title>
 </head>
 <script>
 function chkSubmit(){
 	frm = document.forms['frm'];
 	var subject = frm['subject'].value.trim();
-	
+	/*
 	if(subject == ""){
 		alert("제목은 반드시 작성해야 합니다");
 		frm['subject'].focus();
 		return false;
 	}
+	*/
 	return true;
 }
 </script>
 <body>
 <h2>수정</h2>
-<form name="frm" action="updateOk.do" method="post" onsubmit="return chkSubmit()">
-<input type="hidden" name="uid" value="${list[0].uid }"/>
-작성자 : ${list[0].name }<br> <%-- 작성자 이름 변경 불가 --%>
-제목 : 
-<input type="text" name="subject" value="${list[0].subject }"/><br>
-내용: <br>
-<textarea name="content">${list[0].content }</textarea>
+<form name="frm" action="memUpdateOk" method="post" onsubmit="return chkSubmit()">
+<input type="hidden" name="useruid" value="${list[0].useruid }"/>
+
+이름:  ${list[0].username }<br>
+이메일:  <input type="text" name="useremail" value="${list[0].useremail }"/><br>
+비번:  <input type="text" name="password" value="${list[0].password }"/><br>
+전화번호:  <input type="text" name="usertel" value="${list[0].usertel }"/><br>
+동의여부:  <input type="number" name="useralarm" value="${list[0].useralarm }"/><br>
+주소:<br> <textarea name="userAdd">${list[0].userAdd }</textarea>
+
 <br>
 <input type="submit" value="수정"/>
  <input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />  
 
 </form>
 <button onclick="history.back()">이전으로</button>
-<button onclick="location.href='list.do'">목록보기</button>
+<button onclick="location.href='memList.do'">목록보기</button>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
 

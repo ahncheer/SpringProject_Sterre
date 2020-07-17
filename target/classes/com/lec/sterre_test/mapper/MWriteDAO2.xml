@@ -15,10 +15,11 @@
 			useruid , usertel , userregdate , 
 			useralarm , userAdd)
 		VALUES
-			(#{username}, #{useremail}, #{password}
-			test_write_seq.nextval, #{usertel}, SYSDATE, 
+			(#{username}, #{useremail}, #{password},
+			users_SEQ.nextval, #{usertel}, SYSDATE, 
 			#{useralarm}, #{userAdd})	
 	</insert>
+	
  
 <!--  
 	<insert id="insert" flushCache="true">

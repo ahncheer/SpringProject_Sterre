@@ -10,7 +10,7 @@ public interface MWriteDAO {
 	public List<MWriteDTO> select();
 	public int minsert(final MWriteDTO dto);
 	public int minsert(String username, String useremail, String password , 
-			String usertel , int useralarm,String userAdd);
+			String usertel, int useralarm, String userAdd);
 	//public BWriteDTO readByuseruid(final int useruid);
 	public MWriteDTO mselectByUseruid(final int useruid);
 	public int mupdate(final MWriteDTO dto);

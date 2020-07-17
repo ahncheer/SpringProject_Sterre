@@ -10,7 +10,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>글 목록</title>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/CSS/common.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<title>유저 목록</title>
 <style>
 table {width: 100%;}
 table, th, td {
@@ -20,16 +24,19 @@ table, th, td {
 </style>
 </head>
 <body>
-
+<div id="list">
 		<hr>
-		<h2>리스트</h2>
+		<h2>유저 리스트</h2>
 		<table>
 			<tr>
-				<th>UID</th>
-				<th>제목</th>
-				<th>작성자</th>
-				<th>조회수</th>
-				<th>등록일</th>
+				<th>useruid</th>
+				<th>이름</th>
+				<th>이메일</th>
+				<th>비밀번호</th>
+				<th>전화번호</th>
+				<th>등록날짜</th>
+				<th>푸쉬동의여부</th>
+				<th>유저주소</th>
 			</tr>
 	
 		<c:choose>
@@ -39,11 +46,14 @@ table, th, td {
 			
 			<c:forEach var="dto" items="${list }">
 			<tr>
-				<td>${dto.uid }</td>
-				<td><a href="view.do?uid=${dto.uid }">${dto.subject }</a></td>
-				<td>${dto.name }</td>
-				<td>${dto.viewCnt }</td>
-				<td>${dto.regDate }</td>
+				<td>${dto.useruid }</td>
+				<td><a href="memView.do?useruid=${dto.useruid }">${dto.username }</a></td>
+				<td>${dto.useremail }</td>
+				<td>${dto.password }</td>
+				<td>${dto.usertel }</td>
+				<td>${dto.userregdate }</td>
+				<td>${dto.useralarm }</td>
+				<td>${dto.userAdd }</td>
 			</tr>			
 			</c:forEach>
 			
@@ -52,9 +62,8 @@ table, th, td {
 
 		</table>
 		<br>
-		<button onclick="location.href='write'">신규등록</button>
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<button onclick="location.href='signUp'">신규등록</button>
+</div>
 </body>
 </html>
 

@@ -13,7 +13,7 @@
 	<c:otherwise>
 	<script>
 		alert('수정 성공');
-		location.href = "view.do?uid=${param.uid}";
+		location.href = "memView.do?useruid=${param.useruid}";
 	</script>
 	</c:otherwise>
 </c:choose>

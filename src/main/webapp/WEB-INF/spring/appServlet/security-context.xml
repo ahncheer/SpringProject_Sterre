@@ -24,6 +24,7 @@
 			<security:intercept-url pattern="/sample/all" access="permitAll"/>
 			<security:intercept-url pattern="/index" access="permitAll"/>
 			<security:intercept-url pattern="/board/**" access="permitAll"/>
+			<security:intercept-url pattern="/member/**" access="permitAll"/>
 			
 			<!-- /sample/member URI 요청은 ROLE_MEMBER 라는 권한이 있는 사용자만이 접근 가능 -->
 			<security:intercept-url pattern="/sample/member" access="hasRole('ROLE_MEMBER')"/>
@@ -59,9 +60,9 @@
 			<security:jdbc-user-service data-source-ref="dataSource"/>
 			<!--<security:jdbc-user-service data-source-ref="dataSource"
 				users-by-username-query=
-					"SELECT userid username, userpw password, enabled FROM sr_member WHERE userid = ?"
+					"SELECT useruid username, userpw password, enabled FROM sr_member WHERE useruid = ?"
 				authorities-by-username-query=
-					"SELECT userid username, auth authority FROM sr_member_auth WHERE userid = ?"
+					"SELECT useruid username, auth authority FROM sr_member_auth WHERE useruid = ?"
 			/>
 			-->
 			

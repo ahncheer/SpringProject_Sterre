@@ -62,5 +62,3 @@ SELECT * FROM authorities ;
 
 
 
-
-

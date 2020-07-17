@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lec.sterre_test.board.beans.MWriteDAO">
+	<select id="select" resultType="com.lec.sterre_test.member.beans.MWriteDTO">
+			SELECT 
+				username "username", 
+				useremail useremail,
+				password password, 
+				useruid useruid, 
+				usertel usertel,
+				userregdate userregdate, 
+				useralarm useralarm,
+				userAdd userAdd,
+				enabled enabled
+			FROM 
+				users 
+			ORDER BY 
+				useruid DESC
+	</select>
+
+	<!-- view.do -->
+	<select id="mselectByUid" resultType="com.lec.sterre_test.member.beans.MWriteDTO">
+		SELECT 
+			username "username", useremail useremail, password password, 
+			useruid useruid, usertel usertel, userregdate userregdate, 
+			useralarm useralarm, userAdd userAdd
+		FROM users 
+		WHERE useruid=#{useruid}
+	</select>
+	
+	<!-- 조회수 증가 -->
+	<!-- 
+	<update id="incViewCnt" flushCache="true">
+		UPDATE test_write 
+		SET wr_viewcnt = wr_viewcnt + 1 
+		WHERE wr_uid = #{param1}
+	</update>
+ -->
+<!-- 	
+	<update id="update" flushCache="true" 
+		parameterType="com.lec.sterre_test.board.beans.BWriteDTO">
+		UPDATE test_write 
+		SET wr_subject = #{subject}, wr_content = #{content} 
+		WHERE wr_uid = #{uid}
+	</update>
+ -->
+	<update id="mupdate" flushCache="true" 
+		parameterType="com.lec.sterre_test.member.beans.MWriteDTO">
+		UPDATE users 
+		SET 
+		username #{a.username}, useremail #{a.useremail}, password #{a.password}, 
+		usertel #{a.usertel}, useralarm #{a.useralarm}, userAdd #{a.userAdd}
+		WHERE userid = #{param1}
+	</update>
+	
+	
+	
+	<delete id="mdeleteByUseruid" flushCache="true">
+		DELETE FROM users WHERE userid = #{userid}
+	</delete>
+
+<!-- 
+	<select id="searchBySubject" resultType="com.lec.sterre_test.board.beans.BWriteDTO"></select>
+ -->
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -29,14 +29,16 @@
 #list table {width: 100%;}
 
 #list table, #list th, #list td {
-	border: 1px solid black;
+	border: 1px solid #1c5559;
 	border-collapse: collapse;
 }
 
 #list th, #list td {
 	padding: 10px;
 }
-
+tr:nth-child(even) {
+	background-color: #e7f7f8;
+	}
 #list .subject:hover { /* 글 제목 위헤 커서 올린 경우*/
 	text-decoration: underline;
 	color: orange;

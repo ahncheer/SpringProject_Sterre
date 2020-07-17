@@ -3,7 +3,6 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>  
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>  
-
 <%-- JSTL 버젼으로 바뀌니, import 번잡합도 사라진다. JAVA변수 선언도 사라진다 --%>
 
 <!DOCTYPE html>
@@ -11,10 +10,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/CSS/common.css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-
 <title>글 목록</title>
 <style>
 table {width: 100%;}
@@ -25,7 +20,6 @@ table, th, td {
 </style>
 </head>
 <body>
-<div id="list">
 
 		<hr>
 		<h2>리스트</h2>
@@ -58,9 +52,8 @@ table, th, td {
 
 		</table>
 		<br>
-		<button onclick="location.href='write'"
-		id="btnWrite" class="btn success">신규등록</button>
-</div>
+		<button onclick="location.href='write'">신규등록</button>
+
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>

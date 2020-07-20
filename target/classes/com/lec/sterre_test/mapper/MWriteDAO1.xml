@@ -51,8 +51,8 @@
 		parameterType="com.lec.sterre_test.member.beans.MWriteDTO">
 		UPDATE users 
 		SET 
-		useremail #{a.useremail}, password #{a.password}, 
-		usertel #{a.usertel}, useralarm #{a.useralarm}, userAdd #{a.userAdd}
+		useremail = #{a.useremail}, password = #{a.password}, 
+		usertel = #{a.usertel}, useralarm = #{a.useralarm}, userAdd = #{a.userAdd}
 		WHERE useruid = #{param1}
 	</update>
 	

@@ -8,8 +8,7 @@
 
 	<insert id="minsert" flushCache="true"
 		parameterType="com.lec.sterre_test.member.beans.MWriteDTO"
-		keyProperty="useruid" useGeneratedKeys="true" keyColumn="useruid"
-		>
+		keyProperty="useruid" useGeneratedKeys="true" keyColumn="useruid">
 		INSERT INTO users
 			(username , useremail , password , 
 			useruid , usertel , userregdate , 
@@ -20,6 +19,11 @@
 			#{useralarm}, #{userAdd})	
 	</insert>
 	
+	<insert id="minsert2" flushCache="true"
+		parameterType="com.lec.sterre_test.member.beans.MWriteDTO"
+		keyProperty="username" useGeneratedKeys="true" keyColumn="username">
+		INSERT INTO authorities VALUES (#{username}, 'ROLE_MEMBER')
+	</insert>
  
 <!--  
 	<insert id="insert" flushCache="true">

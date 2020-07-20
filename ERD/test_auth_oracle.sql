@@ -56,7 +56,17 @@ SELECT * FROM users ;
 SELECT * FROM authorities ;
 
 
+INSERT ALL 
+	INTO users (username, password, useremail, usertel, useruid) VALUES ('aaa', 'aaa', 'amu30141592@gamil.com', '010-2107-3301', users_SEQ.nextval)
+	INTO authorities (username, authority) VALUES ('aaa', 'ROLE_MEMBER')
+SELECT  * FROM DUAL;
 
+INSERT ALL 
+	INTO users (username, useremail, password, useruid, usertel, userregdate, useralarm, userAdd) 
+	VALUES ('test1', 'test1','test1', users_SEQ.nextval, 'test1', SYSDATE, 1 , 'test1')	
+	INTO authorities (username, authority) VALUES ('test1', 'ROLE_MEMBER')
+SELECT  * FROM DUAL
+	;
 
 
 

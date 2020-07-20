@@ -37,7 +37,6 @@ function chkSubmit(){
 <body>
 <h2>수정</h2>
 <form name="frm" action="memUpdateOk" method="post" onsubmit="return chkSubmit()">
-<input type="hidden" name="useruid" value="${list[0].useruid }"/>
 
 이름:  ${list[0].username }<br>
 이메일:  <input type="text" name="useremail" value="${list[0].useremail }"/><br>
@@ -45,6 +44,7 @@ function chkSubmit(){
 전화번호:  <input type="text" name="usertel" value="${list[0].usertel }"/><br>
 동의여부:  <input type="number" name="useralarm" value="${list[0].useralarm }"/><br>
 주소:<br> <textarea name="userAdd">${list[0].userAdd }</textarea>
+<input type="hidden" name="useruid" value="${list[0].useruid }"/>
 
 <br>
 <input type="submit" value="수정"/>

@@ -24,6 +24,7 @@ public class MWriteCommand implements MCommand {
 		// MyBatis 사용
 		MWriteDAO dao = C.sqlSession.getMapper(MWriteDAO.class);
 		model.addAttribute("result", dao.minsert(dto));
+		model.addAttribute("result", dao.minsert2(dto));
 		
 		System.out.println("생성된 user uid 는 " + dto.getUseruid());
 		

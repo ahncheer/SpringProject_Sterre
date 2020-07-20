@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lec.sterre_test.goods.beans.GWriteDAO">
+	<select id="select" resultType="com.lec.sterre_test.goods.beans.GWriteDTO">
+			SELECT 
+				goodsuid goodsuid, 
+				goodsname  goodsname,
+				goodsprice  goodsprice, 
+				goodsContent  goodsContent, 
+				goodsregdate  goodsregdate,
+				goodsTotal  goodsTotal,
+				goodsLeft goodsLeft,
+				goodspic1 goodspic1,
+				goodspic2  goodspic2
+			FROM 
+				sr_goods 
+			ORDER BY 
+				goodsuid DESC
+	</select>
+
+	<!-- view.do -->
+	<select id="goodsSelectByUid" resultType="com.lec.sterre_test.goods.beans.GWriteDTO">
+		SELECT 
+			goodsuid goodsuid, 
+			goodsname  goodsname ,
+			goodsprice  goodsprice , 
+			goodsContent  goodsContent , 
+			goodsregdate  goodsregdate ,
+			goodsTotal  goodsTotal,
+			goodsLeft goodsLeft,
+			goodspic1 goodspic1,
+			goodspic2  goodspic2 
+		FROM sr_goods 
+		WHERE goodsuid=#{goodsuid}
+	</select>
+	
+	<!-- 조회수 증가 -->
+	<!-- 
+	<update id="incViewCnt" flushCache="true">
+		UPDATE sr_goods 
+		SET wr_viewcnt = wr_viewcnt + 1 
+		WHERE wr_uid = #{param1}
+	</update>
+ -->
+<!-- 	
+	<update id="update" flushCache="true" 
+		parameterType="com.lec.sterre_test.goods.beans.BWriteDTO">
+		UPDATE sr_goods 
+		SET wr_subject = #{subject}, wr_content = #{content} 
+		WHERE wr_uid = #{uid}
+	</update>
+ -->
+	<update id="goodsUpdate" flushCache="true" 
+		parameterType="com.lec.sterre_test.goods.beans.GWriteDTO">
+		UPDATE sr_goods 
+		SET 
+			goodsname  = #{a.goodsname} ,
+			goodsprice  = #{a.goodsprice} , 
+			goodsContent  = #{a.goodsContent} , 
+			goodsTotal  = #{a.goodsTotal},
+			goodsLeft = #{a.goodsLeft},
+			goodspic1 = #{a.goodspic1},
+			goodspic2  = #{a.goodspic2} 
+		WHERE goodsuid = #{param1}
+	</update>
+	
+	
+	
+	<delete id="goodsDeleteByUid" flushCache="true">
+		DELETE FROM sr_goods WHERE goodsuid = #{goodsuid}
+	</delete>
+
+<!-- 
+	<select id="searchBySubject" resultType="com.lec.sterre_test.goods.beans.BWriteDTO"></select>
+ -->
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

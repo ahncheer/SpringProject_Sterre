@@ -10,11 +10,11 @@
 		parameterType="com.lec.sterre_test.goods.beans.GWriteDTO"
 		keyProperty="goodsuid" useGeneratedKeys="true" keyColumn="goodsuid">
 		INSERT INTO sr_goods
-			(goodsuid, goodsname, goodsprice, goodsContent, 
-			goodsregdate, goodsTotal, goodsLeft, goodspic1, goodspic2 )
+			(goodsuid, goodsname, goodsprice, goodsContent, goodsregdate,  goodsSort, goodsCustom,
+			goodsTotal, goodsLeft, goodsLike,  goodspic1, goodspic2 )
 		VALUES
-			(test_write_seq.nextval, #{goodsname}, #{goodsprice}, #{goodsContent},
-			SYSDATE, #{goodsTotal}, #{goodsLeft}, #{goodspic1}, #{goodspic2})	
+			(test_write_seq.nextval, #{goodsname}, #{goodsprice}, #{goodsContent}, SYSDATE, #{goodsSort}, #{goodsCustom},
+			 #{goodsTotal}, #{goodsLeft}, #{goodsLike}, #{goodspic1}, #{goodspic2})	
 	</insert>
  
 <!--  

@@ -46,6 +46,18 @@ public class GoodsController {
 		return "goods/goodsList";
 	}
 	
+	@RequestMapping("/goodsClientList")
+	public String clientList(Model model) {
+		command = new GListCommand();
+		command.execute(model);
+		return "goods/goodsClientList";
+	}
+	@RequestMapping("/goodsClientListCheck")
+	public String goodsClientListCheck(Model model) {
+		command = new GListCommand();
+		command.execute(model);
+		return "goods/goodsClientListCheck";
+	}
 	@RequestMapping("/goodsWrite")
 	public String write(Model model) {
 		return "goods/goodsWrite";
@@ -56,6 +68,13 @@ public class GoodsController {
 		model.addAttribute("dto", dto);
 		new GWriteCommand().execute(model);
 //		return "goods/goodsWriteOk";
+	}
+	
+	@RequestMapping("/goodsClientView")
+	public String view2(int goodsuid, Model model) {
+		model.addAttribute("goodsuid", goodsuid);
+		new GViewCommand().execute(model);
+		return "goods/goodsClientView";
 	}
 	
 	@RequestMapping("/goodsView")
@@ -85,8 +104,6 @@ public class GoodsController {
 		new GDeleteCommand().execute(model);
 		return "goods/goodsDeleteOk";
 	}
-	
-	
 	
 }
 

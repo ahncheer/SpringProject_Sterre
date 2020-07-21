@@ -36,8 +36,9 @@ table, th, td {
 				<th>가격</th>
 				<th>설명</th>
 				<th>등록일</th>
-				<th>전체 개수</th>
+				<th>판매된 개수</th>
 				<th>남은 개수</th>
+				<th>좋아요</th>
 				<th>사진1</th>
 				<th>사진2</th>
 			</tr>
@@ -56,6 +57,7 @@ table, th, td {
 				<td>${dto.goodsregdate }</td>
 				<td>${dto.goodsTotal }</td>
 				<td>${dto.goodsLeft }</td>
+				<td>${dto.goodsLike }</td>
 				<td>${dto.goodspic1 }</td>
 				<td>${dto.goodspic2 }</td>
 			</tr>			

@@ -45,6 +45,7 @@ function chkSubmit(){
 설명: <textarea name="goodsContent">${list[0].goodsContent }</textarea> <br>
 전체개수: <input type="number" name="goodsTotal" value="${list[0].goodsTotal }"/><br>
 남은개수: <input type="number" name="goodsLeft" value="${list[0].goodsLeft }"/><br>
+좋아요 개수: <input type="number" name="goodsLike" value="${list[0].goodsLike }"/><br>
 사진1: <input type="text" name="goodspic1" value="${list[0].goodspic1 }"/><br>
 사진2: <input type="text" name="goodspic2" value="${list[0].goodspic2 }"/><br>
 

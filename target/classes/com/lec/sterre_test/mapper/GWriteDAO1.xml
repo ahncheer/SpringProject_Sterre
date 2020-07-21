@@ -11,8 +11,11 @@
 				goodsprice  goodsprice, 
 				goodsContent  goodsContent, 
 				goodsregdate  goodsregdate,
+				goodsSort  goodsSort,
+				goodsCustom  goodsCustom,
 				goodsTotal  goodsTotal,
 				goodsLeft goodsLeft,
+				goodsLike goodsLike,
 				goodspic1 goodspic1,
 				goodspic2  goodspic2
 			FROM 
@@ -29,8 +32,11 @@
 			goodsprice  goodsprice , 
 			goodsContent  goodsContent , 
 			goodsregdate  goodsregdate ,
+			goodsSort  goodsSort,
+			goodsCustom  goodsCustom,
 			goodsTotal  goodsTotal,
 			goodsLeft goodsLeft,
+			goodsLike goodsLike,
 			goodspic1 goodspic1,
 			goodspic2  goodspic2 
 		FROM sr_goods 
@@ -60,8 +66,11 @@
 			goodsname  = #{a.goodsname} ,
 			goodsprice  = #{a.goodsprice} , 
 			goodsContent  = #{a.goodsContent} , 
+			goodsSort  = #{a.goodsSort},
+			goodsCustom  = #{a.goodsCustom},
 			goodsTotal  = #{a.goodsTotal},
 			goodsLeft = #{a.goodsLeft},
+			goodsLike = #{a.goodsLike},
 			goodspic1 = #{a.goodspic1},
 			goodspic2  = #{a.goodspic2} 
 		WHERE goodsuid = #{param1}

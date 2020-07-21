@@ -37,9 +37,9 @@ function chkDelete(goodsuid){
 이름 : ${list[0].goodsname }<br>
 가격 : ${list[0].goodsprice }<br>
 설명 : ${list[0].goodsContent }<br>
-등록일 : ${list[0].goodsregdate }<br>
 종류 : ${list[0].goodsSort }<br>
 유형 : ${list[0].goodsCustom }<br>
+등록일 : ${list[0].goodsregdate }<br>
 전체개수 : ${list[0].goodsTotal }<br>
 남은개수 : ${list[0].goodsLeft }<br>
 좋아요 개수 : ${list[0].goodsLike }<br>

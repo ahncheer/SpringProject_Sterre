@@ -38,6 +38,7 @@ function chkSubmit(){  // 폼 검증
 설명: <input type="text" name="goodsContent"/><br>
 전체개수: <input type="number" name="goodsTotal"/><br>
 남은개수: <input type="number" name="goodsLeft"/><br>
+좋아요 개수: <input type="number" name="goodsLike"/><br>
 사진1: <input type="text" name="goodspic1"/><br>
 사진2: <input type="text" name="goodspic2"/><br>
 <input type="submit" value="등록"/>

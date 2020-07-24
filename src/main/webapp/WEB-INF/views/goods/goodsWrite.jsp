@@ -30,12 +30,16 @@ function chkSubmit(){  // 폼 검증
 
 </script>
 <body>
+  <%@ include file="../header.jsp" %>
+
 <h2>글작성</h2>
 <%-- 글 내용이 많을수 있기 때문에 POST 방식 사용 --%>
 <form name="frm" action="goodsWriteOk" method="post" onsubmit="return chkSubmit()">
 이름: <input type="text" name="goodsname"/><br>
 가격: <input type="number" name="goodsprice"/><br>
 설명: <input type="text" name="goodsContent"/><br>
+전체개수: <input type="number" name="goodsSort"/><br>
+전체개수: <input type="number" name="goodsCustom"/><br>
 전체개수: <input type="number" name="goodsTotal"/><br>
 남은개수: <input type="number" name="goodsLeft"/><br>
 좋아요 개수: <input type="number" name="goodsLike"/><br>

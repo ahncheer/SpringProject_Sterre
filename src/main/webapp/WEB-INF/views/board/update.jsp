@@ -34,6 +34,8 @@ function chkSubmit(){
 }
 </script>
 <body>
+  <%@ include file="../header.jsp" %>
+
 <h2>수정</h2>
 <form name="frm" action="updateOk.do" method="post" onsubmit="return chkSubmit()">
 <input type="hidden" name="uid" value="${list[0].uid }"/>

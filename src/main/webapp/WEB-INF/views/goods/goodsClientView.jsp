@@ -30,6 +30,8 @@ function chkDelete(goodsuid){
 }
 </script>
 <body>
+  <%@ include file="../header.jsp" %>
+
 <h2>읽기 ${list[0].goodsname }</h2>
 
 

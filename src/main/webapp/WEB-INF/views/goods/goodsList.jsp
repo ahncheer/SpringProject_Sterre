@@ -25,6 +25,8 @@ table, th, td {
 </style>
 </head>
 <body>
+	<%@ include file="../header.jsp" %>
+
 <div id="list">
 
 		<hr>

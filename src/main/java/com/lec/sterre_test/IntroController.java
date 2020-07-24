@@ -16,17 +16,17 @@ public class IntroController {
 
 	@GetMapping("/bestFaq")
 	public void doBestFaq() {
-		System.out.println("doBestFaq() : access member only");
+		System.out.println("doBestFaq() : access everybody");
 	}
 	
 	@GetMapping("/wayToCome")
 	public void doWayToCome() {
-		System.out.println("doWayToCome() : access admin only");
+		System.out.println("doWayToCome() : access everybody");
 	}
 	
 	@GetMapping("/index")
 	public void doIndex() {
-		System.out.println("doIndex() : access admin only");
+		System.out.println("doIndex() : access everybody");
 	}
 	
 }

@@ -30,7 +30,9 @@ function chkSubmit(){  // 폼 검증
 
 </script>
 <body>
-<h2>로그인</h2>
+  <%@ include file="../header.jsp" %>
+
+<h2>회원가입</h2>
 <%-- 글 내용이 많을수 있기 때문에 POST 방식 사용 --%>
 <form name="frm" action="signUpOk" method="post" onsubmit="return chkSubmit()">
 이름: <input type="text" name="username"/><br>

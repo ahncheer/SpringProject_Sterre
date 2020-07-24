@@ -45,8 +45,15 @@ public class CommonController {
 	}
 	
 	
+	@GetMapping("/header")
+	public void doHeader() {  // 리턴타입 없으면 url 과 같은 경로의 jsp 파일을 찾는다.--> /sample/all.jsp
+		System.out.println("doHeader() : access everybody");
+	}
 	
-	
+	@GetMapping("/footer")
+	public void doFooter() {  // 리턴타입 없으면 url 과 같은 경로의 jsp 파일을 찾는다.--> /sample/all.jsp
+		System.out.println("doFooter() : access everybody");
+	}
 	
 	
 	

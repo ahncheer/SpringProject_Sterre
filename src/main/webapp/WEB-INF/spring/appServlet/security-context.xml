@@ -26,12 +26,14 @@
 			<security:intercept-url pattern="/board/**" access="permitAll"/>
 			<security:intercept-url pattern="/member/**" access="permitAll"/>
 			<security:intercept-url pattern="/goods/**" access="permitAll"/>
+			<security:intercept-url pattern="/header" access="permitAll"/>
+			<security:intercept-url pattern="/footer" access="permitAll"/>
 			
 			<!-- /sample/member URI 요청은 ROLE_MEMBER 라는 권한이 있는 사용자만이 접근 가능 -->
 			<security:intercept-url pattern="/sample/member" access="hasRole('ROLE_MEMBER')"/>
 			<security:intercept-url pattern="/client/clientIndex" access="hasRole('ROLE_MEMBER')"/>
 			
-			<!-- /sample/member URI 요청은 ROLE_MEMBER 라는 권한이 있는 사용자만이 접근 가능 -->
+			<!-- /sample/member URI 요청은 ROLE_ADMIN 라는 권한이 있는 사용자만이 접근 가능 -->
 			<security:intercept-url pattern="/sample/admin" access="hasRole('ROLE_ADMIN')"/>
 			
 				<!-- <security:form-login/> --> <!-- 스프링 기본 제공 로그인 페이지 사용 -->

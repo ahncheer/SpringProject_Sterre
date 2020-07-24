@@ -30,6 +30,8 @@ function chkDelete(useruid){
 }
 </script>
 <body>
+  <%@ include file="../header.jsp" %>
+
 <h2>${list[0].username } 정보</h2>
 <hr>
 useruid : ${list[0].useruid } <br>

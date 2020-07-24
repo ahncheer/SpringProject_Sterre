@@ -30,6 +30,8 @@ function chkDelete(uid){
 }
 </script>
 <body>
+  <%@ include file="../header.jsp" %>
+
 <h2>읽기 ${list[0].subject }</h2>
 <br>
 UID : ${list[0].uid }<br>

@@ -35,6 +35,8 @@ function chkSubmit(){
 }
 </script>
 <body>
+  <%@ include file="../header.jsp" %>
+
 <h2>수정</h2>
 <form name="frm" action="goodsUpdateOk.do" method="post" onsubmit="return chkSubmit()">
 <input type="hidden" name=goodsuid value="${list[0].goodsuid }"/>
@@ -43,6 +45,8 @@ function chkSubmit(){
 이름: <input type="text" name="goodsname" value="${list[0].goodsname }"/><br>
 가격: <input type="number" name="goodsprice" value="${list[0].goodsprice }"/><br>
 설명: <textarea name="goodsContent">${list[0].goodsContent }</textarea> <br>
+종류: <input type="number" name="goodsTotal" value="${list[0].goodsSort }"/><br>
+타입: <input type="number" name="goodsTotal" value="${list[0].goodsCustom }"/><br>
 전체개수: <input type="number" name="goodsTotal" value="${list[0].goodsTotal }"/><br>
 남은개수: <input type="number" name="goodsLeft" value="${list[0].goodsLeft }"/><br>
 좋아요 개수: <input type="number" name="goodsLike" value="${list[0].goodsLike }"/><br>

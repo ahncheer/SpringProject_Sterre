@@ -9,6 +9,7 @@
 
 
 <%
+	int goods_sort = Integer.parseInt(request.getParameter("goods_sort"));
 	int goods_select = Integer.parseInt(request.getParameter("goods_select"));
 %>
 
@@ -23,39 +24,98 @@
 <title>Document</title>
 
 </head>
+
+<style>
+#goods_box{
+	background-color: #eee; 
+	width: 200px; 
+	height: auto;
+	margin: 10px; 
+	border: 1px dashed #46bdc6;
+	display: inline-block;
+}
+
+#goods_box_in{
+background-color: grey;
+}
+</style>
+
 <body>
-<!--
+<!-- ${param.goods_sort }  확인용ㅇ 
 ${param.goods_select }  확인용ㅇ 
 <hr>
--->
-<br>
+ -->
+
+
 <div>
 
-	<c:choose>
-		<c:when test="${empty list || fn:length(list) == 0}">
-		</c:when>
-		<c:otherwise>
+<c:choose>
+	<c:when test="${empty list || fn:length(list) == 0}">
+	</c:when>
+	<c:otherwise>
 		
-		<c:forEach var="dto" items="${list }">
-			<c:if test="${dto.goodsSort == param.goods_select}">
-			
-				<div style="background-color: #eee; width: 200px; height: auto;
-							margin: 2%; border: 1px dashed #46bdc6;display: inline-block;">
-					<a href="goodsClientView?goodsuid=${dto.goodsuid }">
-						<div style="background-color: grey"><img src="${dto.goodspic1 }" style="width: 200px;"></div>
-						<p>이름 : ${dto.goodsname }</p>
-						<p>가격 : ${dto.goodsprice }</p>
-						<p>가격 : ${dto.goodsSort }</p>
-					</a>
-				</div>
-				
-			</c:if>
-		
-		</c:forEach>
-		
+			<c:choose>
+				<c:when test="${param.goods_sort == 0 && param.goods_select == 0}">
+					<c:forEach var="dto" items="${list }">
+							<div id="goods_box">
+								<a href="goodsClientView?goodsuid=${dto.goodsuid }">
+									<div id="goods_box_in"><img src="${dto.goodspic1 }" style="width: 200px;"></div>
+									<p>이름 : ${dto.goodsname }</p>
+									<p>가격 : ${dto.goodsprice }</p>
+									<p>종류 : ${dto.goodsSort }</p>
+								</a>
+							</div>
+					</c:forEach>
+				</c:when>
+				<c:when test="${param.goods_sort == 0 && param.goods_select > 0}">
+					<c:forEach var="dto" items="${list }">
+						<c:if test="${dto.goodsCustom == param.goods_select}">
+							<div id="goods_box">
+								<a href="goodsClientView?goodsuid=${dto.goodsuid }">
+									<div id="goods_box_in"><img src="${dto.goodspic1 }" style="width: 200px;"></div>
+									<p>이름 : ${dto.goodsname }</p>
+									<p>가격 : ${dto.goodsprice }</p>
+									<p>종류 : ${dto.goodsSort }</p>
+								</a>
+							</div>
+						</c:if>
+					</c:forEach>
+				</c:when>
+				<c:when test="${param.goods_sort > 0 && param.goods_select == 0}">
+					<c:forEach var="dto" items="${list }">
+						<c:if test="${dto.goodsSort == param.goods_sort}">
+							<div id="goods_box">
+								<a href="goodsClientView?goodsuid=${dto.goodsuid }">
+									<div id="goods_box_in"><img src="${dto.goodspic1 }" style="width: 200px;"></div>
+									<p>이름 : ${dto.goodsname }</p>
+									<p>가격 : ${dto.goodsprice }</p>
+									<p>종류 : ${dto.goodsSort }</p>
+								</a>
+							</div>
+						</c:if>
+					</c:forEach>					
+				</c:when>
+				<c:when test="${param.goods_sort > 0 && param.goods_select > 0}">
+					<c:forEach var="dto" items="${list }">
+						<c:if test="${dto.goodsSort == param.goods_sort && dto.goodsCustom == param.goods_select}">
+							<div id="goods_box">
+								<a href="goodsClientView?goodsuid=${dto.goodsuid }">
+									<div id="goods_box_in"><img src="${dto.goodspic1 }" style="width: 200px;"></div>
+									<p>이름 : ${dto.goodsname }</p>
+									<p>가격 : ${dto.goodsprice }</p>
+									<p>종류 : ${dto.goodsSort }</p>
+								</a>
+							</div>
+						</c:if>
+					</c:forEach>					
+				</c:when>
+			</c:choose>
+
+
 		</c:otherwise>
 	</c:choose>
 </div>
+
 
 </body>
 </html>

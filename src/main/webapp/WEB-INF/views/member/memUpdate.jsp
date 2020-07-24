@@ -35,6 +35,8 @@ function chkSubmit(){
 }
 </script>
 <body>
+  <%@ include file="../header.jsp" %>
+
 <h2>수정</h2>
 <form name="frm" action="memUpdateOk" method="post" onsubmit="return chkSubmit()">
 

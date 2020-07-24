@@ -24,6 +24,8 @@ table, th, td {
 </style>
 </head>
 <body>
+  <%@ include file="../header.jsp" %>
+
 <div id="list">
 		<hr>
 		<h2>유저 리스트</h2>

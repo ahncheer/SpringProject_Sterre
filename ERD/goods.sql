@@ -7,7 +7,7 @@ DROP SEQUENCE sr_goods_SEQ;
 CREATE TABLE sr_goods
 (
 	goodsuid number NOT NULL,
-	goodsname varchar2(30) NOT NULL,
+	goodsname varchar2(100) NOT NULL,
 	goodsprice number NOT NULL,
 	goodsContent varchar2(100) NOT NULL,
 	goodsregdate DATE DEFAULT SYSDATE,
@@ -28,20 +28,36 @@ SELECT * FROM sr_goods;
 
 -- 기본데이터 작성
 INSERT INTO sr_goods 
-VALUES (sr_goods_SEQ.nextval, '버즈케이스1', 10000, '버즈를 안전하게 들고 다닐 수 있어요', SYSDATE, 
-		1, 0, 30, 30, 12, 
+VALUES (sr_goods_SEQ.nextval, '핸드폰케이스-일반', 10000, '버즈를 안전하게 들고 다닐 수 있어요', SYSDATE, 
+		1, 1, 30, 30, 12, 
+		'https://image.idus.com/image/files/823c41dc67e9406a9f693073a56ad291_1080.jpg',
+		'https://image.idus.com/image/files/823c41dc67e9406a9f693073a56ad291_1080.jpg');
+INSERT INTO sr_goods 
+VALUES (sr_goods_SEQ.nextval, '핸드폰케이스-글귀', 10000, '버즈를 안전하게 들고 다닐 수 있어요', SYSDATE, 
+		1, 2, 30, 30, 12, 
+		'https://image.idus.com/image/files/b08c5b246d8a44b8b7332878a12164ba_1080.jpg',
+		'https://image.idus.com/image/files/b08c5b246d8a44b8b7332878a12164ba_1080.jpg');
+	INSERT INTO sr_goods 
+VALUES (sr_goods_SEQ.nextval, '핸드폰케이스-주문제작', 10000, '버즈를 안전하게 들고 다닐 수 있어요', SYSDATE, 
+		1, 3, 30, 30, 12, 
+		'https://image.idus.com/image/files/ee070a7455ed451fbbc135b5cadfc4c5_1080.jpg',
+		'https://image.idus.com/image/files/ee070a7455ed451fbbc135b5cadfc4c5_1080.jpg');
+
+INSERT INTO sr_goods 
+VALUES (sr_goods_SEQ.nextval, '버즈케이스-일반', 10000, '버즈를 안전하게 들고 다닐 수 있어요', SYSDATE, 
+		2, 1, 30, 30, 12, 
 		'https://image.idus.com/image/files/8e044a36322d410c9cdf99d046ea42c2_720.jpg',
 		'https://image.idus.com/image/files/043af3d765824585b0e28b80e69e15bd_720.jpg');
 INSERT INTO sr_goods 
-VALUES (sr_goods_SEQ.nextval, '버즈케이스2', 10000, '버즈를 안전하게 들고 다닐 수 있어요', SYSDATE, 
-		2, 0, 30, 30, 12, 
-		'https://image.idus.com/image/files/8e044a36322d410c9cdf99d046ea42c2_720.jpg',
-		'https://image.idus.com/image/files/043af3d765824585b0e28b80e69e15bd_720.jpg');
+VALUES (sr_goods_SEQ.nextval, '버즈케이스-글귀', 10000, '버즈를 안전하게 들고 다닐 수 있어요', SYSDATE, 
+		2, 2, 30, 30, 12, 
+		'https://image.idus.com/image/files/0bbbb8aadfe04eba8da75cdc8ebf6f9c_1080.jpg',
+		'https://image.idus.com/image/files/0bbbb8aadfe04eba8da75cdc8ebf6f9c_1080.jpg');
 	INSERT INTO sr_goods 
-VALUES (sr_goods_SEQ.nextval, '버즈케이스3', 10000, '버즈를 안전하게 들고 다닐 수 있어요', SYSDATE, 
-		3, 0, 30, 30, 12, 
-		'https://image.idus.com/image/files/8e044a36322d410c9cdf99d046ea42c2_720.jpg',
-		'https://image.idus.com/image/files/043af3d765824585b0e28b80e69e15bd_720.jpg');
+VALUES (sr_goods_SEQ.nextval, '버즈케이스-주문제작', 10000, '버즈를 안전하게 들고 다닐 수 있어요', SYSDATE, 
+		2, 3, 30, 30, 12, 
+		'https://image.idus.com/image/files/0eb5b7f21cd14f6fa2c364d16465379c_1080.png',
+		'https://image.idus.com/image/files/0eb5b7f21cd14f6fa2c364d16465379c_1080.png');
 	
 	
 	

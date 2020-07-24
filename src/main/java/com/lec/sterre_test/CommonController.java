@@ -46,7 +46,10 @@ public class CommonController {
 	
 	
 	@GetMapping("/header")
-	public void doHeader() {  // 리턴타입 없으면 url 과 같은 경로의 jsp 파일을 찾는다.--> /sample/all.jsp
+	public void doHeader(String error, String logout, Model model) { // 리턴타입 없으면 url 과 같은 경로의 jsp 파일을 찾는다.--> /sample/all.jsp
+			System.out.println("header-error: " + error);
+			System.out.println("header-logout: " + logout);
+			
 		System.out.println("doHeader() : access everybody");
 	}
 	

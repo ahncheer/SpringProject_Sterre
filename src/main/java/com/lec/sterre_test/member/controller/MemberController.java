@@ -90,7 +90,11 @@ public class MemberController {
 	}
 	
 
-	
+	@RequestMapping("/myPage")
+	public String myPage() {
+		System.out.println("myPage");
+		return "member/myPage";
+	}
 }
 
 

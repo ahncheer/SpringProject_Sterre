@@ -30,13 +30,13 @@ public class CustomLoginSuccessHandler implements AuthenticationSuccessHandler {
 		
 		// 로그인한 사용자가 ROLE_ADMIN 권한을 가졌다면 로그인 후 곧바로 /sample/admin 으로 이동
 		if(roleNames.contains("ROLE_ADMIN")) {
-			response.sendRedirect(request.getContextPath() + "/sample/admin");
+			response.sendRedirect(request.getContextPath() + "/intro/index");
 			return;
 		}
 		
 		// 아니면 /sample/member 로 이동
 		if(roleNames.contains("ROLE_MEMBER")) {
-			response.sendRedirect(request.getContextPath() + "/sample/member");
+			response.sendRedirect(request.getContextPath() + "/intro/index");
 			return;
 		}
 		

@@ -3,6 +3,10 @@
 DROP TABLE sr_goods CASCADE CONSTRAINTS;
 DROP SEQUENCE sr_goods_SEQ;
 
+
+DROP TABLE sr_buys CASCADE CONSTRAINTS;
+DROP SEQUENCE sr_buys_SEQ;
+
 /* Create Tables */
 CREATE TABLE sr_goods
 (
@@ -21,10 +25,22 @@ CREATE TABLE sr_goods
 	PRIMARY KEY (goodsuid)
 );
 
+CREATE TABLE sr_buys
+(
+	buyuid NUMBER PRIMARY KEY,
+	username varchar2(50) NOT NULL,
+	goodsuid number NOT NULL,
+	buynum NUMBER NOT NULL,
+	buydate DATE DEFAULT SYSDATE
+);
+
+
 -- 시퀀스
 CREATE SEQUENCE sr_goods_SEQ;
-
 SELECT * FROM sr_goods;
+
+CREATE SEQUENCE sr_buys_SEQ;
+SELECT * FROM sr_buys;
 
 -- 기본데이터 작성
 INSERT INTO sr_goods 
@@ -61,11 +77,12 @@ VALUES (sr_goods_SEQ.nextval, '버즈케이스-주문제작', 10000, '버즈를 
 	
 	
 	
+INSERT INTO sr_buys
+	values(sr_buys_SEQ.nextval,'asw', 2, 1, sysdate);
 	
 	
-	
-	
-	
+SELECT buyuid buyuid, username  username, goodsuid  goodsuid, buynum  buynum, buydate  buydate
+FROM sr_buys WHERE username = 'admin';
 	
 	
 	

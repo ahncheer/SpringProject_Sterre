@@ -20,7 +20,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${list[0].goodsuid }</title> <!-- title에 글제목 넣기 -->
 </head>
-
+<script>
+function chkDelete(goodsuid){
+	// 삭제 여부, 다시 확인 하고 진행하기
+	var r = confirm("삭제하시겠습니까?");
+	if(r){
+		location.href = 'goodsDeleteOk.do?goodsuid=' + goodsuid;
+	}
+}
+</script>
 <style>
 .buybutton {
   background-color: #4CAF50; /* Green */
@@ -82,27 +90,10 @@
 		<span class="pinfo">가격 : ${list[0].goodsprice }</span><br>
 		<span class="pinfo">남은개수 : ${list[0].goodsLeft }</span><br>
 		<br>
-		<hr style="width: 60%; float: left; color: grey;">
+		<hr style="width: 60%;float: left;color: grey;">
 		<br><br>
 		<div style="margin-top: 20%;">
-		<!-- 
-			<select name="sel" id="sel">
-			    <option value="1" selected="selected">1</option>
-			    <option value="2">2</option>
-			</select>
-		 -->
-		 
-		 <c:choose> 
-			<c:when test="${user_id eq 'admin'}">
-				<button class="buybutton buybutton1"> 관리자 구매불가</button>
-			</c:when>
-			
-			<c:when test="${not empty user_id }">
-				<button class="buybutton buybutton1"
-			onclick="location.href = '${pageContext.request.contextPath }/buy/buyWrite?goodsuid=${list[0].goodsuid}&goodsprice=${list[0].goodsprice}' " >구매하기</button>
-			</c:when>		 
-		 
-		 </c:choose>
+			<button class="buybutton buybutton1">구매하기</button>
 		</div>
 	</div>
 </div>
@@ -152,7 +143,6 @@ $(document).ready(function(){
 	
 });
 
-var x = $("#sel option:selected").val();
 </script>
 
 

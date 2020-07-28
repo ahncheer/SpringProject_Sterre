@@ -95,6 +95,12 @@ public class MemberController {
 		System.out.println("myPage");
 		return "member/myPage";
 	}
+	
+	@RequestMapping("/adminPage")
+	public String adminPage() {
+		System.out.println("adminPage");
+		return "member/adminPage";
+	}
 }
 
 

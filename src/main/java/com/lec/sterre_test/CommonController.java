@@ -58,7 +58,8 @@ public class CommonController {
 		System.out.println("doFooter() : access everybody");
 	}
 	
-	
+
+
 	
 }
 

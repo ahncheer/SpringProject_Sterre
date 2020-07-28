@@ -54,7 +54,7 @@ function chkSubmit(){  // 폼 검증
 	<p id="inputbox"> &#9;이메일:</p><input class="un" type="text" name="useremail"/><br>
 	<p id="inputbox"> &#9;비번:</p><input class="un" type="text" name="password"/><br>
 	<p id="inputbox"> &#9;전화번호:</p><input class="un" type="text" name="usertel"/><br>
-	<p id="inputbox"> &#9;주소:</p><br> <textarea class="un" name="userAdd" style="resize: vertical; margin-left: 145px;}"></textarea>
+	<p id="inputbox"> &#9;주소:</p><br> <textarea class="un" name="userAdd" style="resize: vertical; margin-left: 145px;height: 80px;}"></textarea>
 	
     
     <hr>
@@ -72,7 +72,12 @@ function chkSubmit(){  // 폼 검증
 
 </div>
 
+<div>
 
+
+
+
+</div>
 
 
 </body>

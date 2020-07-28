@@ -15,7 +15,6 @@
 <title>Bootstrap Navbar with Inline Login Form in Dropdown</title>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600"	rel="stylesheet">
 <link rel="stylesheet"	href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -24,8 +23,13 @@
 	href="${pageContext.request.contextPath }/CSS/header.css" />
 
 </head>
+<style>
+
+
+
+</style>
 <body style="width: 80%; margin-left: 10%">
-<sec:authorize access="isAuthenticated()">
+	<sec:authorize access="isAuthenticated()">
 		<sec:authentication property="principal.username" var="user_id" />
 		<!-- <div id="user_id">안녕하세요. ${user_id }</div> -->
 	</sec:authorize>

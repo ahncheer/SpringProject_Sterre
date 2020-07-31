@@ -101,6 +101,18 @@ public class MemberController {
 		System.out.println("adminPage");
 		return "member/adminPage";
 	}
+	
+	@RequestMapping("/userAgreement")
+	public String userAgreement() {
+		System.out.println("userAgreement !!");
+		return "member/userAgreement";
+	}
+	
+	@RequestMapping("/privacy")
+	public String privacy() {
+		System.out.println("privacy !!");
+		return "member/privacy";
+	}
 }
 
 

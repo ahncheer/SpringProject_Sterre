@@ -9,18 +9,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>${list[0].goodsuid }</title> <!-- title에 글제목 넣기 -->
+<title>${list[0].goodsname }</title> <!-- title에 글제목 넣기 -->
 </head>
 
 <body>
-  <%@ include file="../header.jsp" %>
-
-<h2>읽기 ${list[0].buyuid }</h2>
+??????????????
+<h2>읽기 ${list[0].goodsname }</h2>
 
 
 고유번호 : ${list[0].buyuid }<br>
 이름 : ${list[0].username }<br>
-가격 : ${list[0].goodsuid }<br>
+가격 : ${list[0].goodsname }<br>
 설명 : ${list[0].buynum }<br>
 등록일 : ${list[0].buydate }<br>
 
@@ -28,7 +27,7 @@
 
 <hr>
 
-
+adwdwawdadwddawwdawdwadadwdwadwa
 		<c:choose>
 			<c:when test="${empty list || fn:length(list) == 0}">
 			</c:when>
@@ -36,11 +35,12 @@
 			
 			<c:forEach var="dto" items="${list }">
 			<tr>
-				<td>${dto.buyuid }</td>
+				<td>STERRE${dto.goodsname }${dto.buyuid }</td>
 				<td>${dto.username }</td>
-				<td>${dto.goodsuid }</td>
+				<td>${dto.goodsname }</td>
 				<td>${dto.buynum }</td>
 				<td>${dto.buydate }</td>
+				
 			</tr>			
 			</c:forEach>
 			

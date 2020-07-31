@@ -24,8 +24,9 @@ public class BuyWriteCommand implements BuyCommand {
 		// MyBatis 사용
 		BuyWriteDAO dao = C.sqlSession.getMapper(BuyWriteDAO.class);
 		model.addAttribute("result", dao.buyInsert(dto));
+		model.addAttribute("result", dao.buyInsert2(dto));
 		
-		System.out.println("생성된 user uid 는 " + dto.getBuyuid());
+		System.out.println("생성된 buy uid 는 " + dto.getBuyuid());
 		
 		//model.addAttribute("result",
 		//		dao.insert(dto.getSubject(), dto.getContent(), dto.getName()));

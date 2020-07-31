@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+	
+<mapper namespace="com.lec.sterre_test.review.beans.ReviewWriteDAO">
+	<select id="select" resultType="com.lec.sterre_test.review.beans.ReviewWriteDTO">
+			SELECT 
+				reviewuid reviewuid, 
+				username  username, 
+				goodsname  goodsname, 
+				reviewcontent  reviewcontent,
+				reviewdate  reviewdate
+			FROM 
+				sr_review 
+			ORDER BY 
+				reviewuid DESC
+	</select>
+
+	<!-- view.do -->
+	<select id="reviewSelectByUid" resultType="com.lec.sterre_test.review.beans.ReviewWriteDTO">
+		SELECT 
+				reviewuid reviewuid, 
+				username  username, 
+				goodsname  goodsname, 
+				reviewcontent  reviewcontent,
+				reviewdate  reviewdate
+		FROM sr_review 
+		WHERE reviewuid=#{reviewuid}
+	</select>
+	
+
+<!-- 	
+	<update id="update" flushCache="true" 
+		parameterType="com.lec.sterre_test.review.beans.BWriteDTO">
+		UPDATE sr_goods 
+		SET wr_subject = #{subject}, wr_content = #{content} 
+		WHERE wr_uid = #{uid}
+	</update>
+ -->
+	<update id="reviewUpdate" flushCache="true" 
+		parameterType="com.lec.sterre_test.review.beans.ReviewWriteDTO">
+		UPDATE sr_review 
+		SET 
+			reviewuid  = #{a.reviewuid} ,
+			username  = #{a.username} , 
+			goodsname  = #{a.goodsname},
+			reviewcontent  = #{a.reviewcontent},
+			reviewdate  = #{a.reviewdate}
+		WHERE reviewuid = #{param1}
+	</update>
+	
+	
+	
+	<delete id="reviewDeleteByUid" flushCache="true">
+		DELETE FROM sr_review WHERE reviewuid = #{reviewuid}
+	</delete>
+
+<!-- 
+	<select id="searchBySubject" resultType="com.lec.sterre_test.review.beans.BWriteDTO"></select>
+ -->
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

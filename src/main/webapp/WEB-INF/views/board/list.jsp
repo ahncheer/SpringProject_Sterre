@@ -29,8 +29,9 @@ table, th, td {
 
 <div id="list">
 
+		<h1 style="text-align: center;color: #777" class="text-shadow-pop-br"><b>자유게시판</b></h1>
 		<hr>
-		<h2>리스트</h2>
+		
 		<table>
 			<tr>
 				<th>UID</th>

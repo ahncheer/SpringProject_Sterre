@@ -10,11 +10,20 @@
 		parameterType="com.lec.sterre_test.buy.beans.BuyWriteDTO"
 		keyProperty="buyuid" useGeneratedKeys="true" keyColumn="buyuid">
 		INSERT INTO sr_buys
-			(buyuid , username , goodsuid , buynum , buydate )
+			(buyuid , username , goodsname , buynum , buydate )
 		VALUES
-			(sr_buys_SEQ.nextval, #{username},	#{goodsuid}, #{buynum}, SYSDATE)	
+			(sr_buys_SEQ.nextval, #{username},	#{goodsname}, #{buynum}, SYSDATE)	
 	</insert>
 	
+	<update id="buyInsert2" flushCache="true"
+		parameterType="com.lec.sterre_test.buy.beans.BuyWriteDTO">
+		UPDATE sr_goods 
+		SET 
+			goodsLeft = ((SELECT goodsLeft FROM SR_GOODS WHERE goodsname = #{goodsname})+ 1)
+		WHERE goodsname = #{goodsname}
+	</update>
+ 
+ 
  
 <!--  
 	<insert id="insert" flushCache="true">

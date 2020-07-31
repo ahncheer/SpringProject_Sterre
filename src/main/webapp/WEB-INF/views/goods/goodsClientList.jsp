@@ -97,9 +97,8 @@ background-color: grey;
 							<div id="goods_box">
 								<a href="goodsClientView?goodsuid=${dto.goodsuid }">
 									<div id="goods_box_in"><img src="${dto.goodspic1 }" style="width: 200px;"></div>
-									<p>이름 : ${dto.goodsname }</p>
-									<p>가격 : ${dto.goodsprice }</p>
-									<p>가격 : ${dto.goodsSort }</p>
+									<p>${dto.goodsname }</p>
+									<p>${dto.goodsprice }</p>
 								</a>
 							</div>
 							<!-- ******************************** -->

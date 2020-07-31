@@ -14,6 +14,7 @@ import com.lec.sterre_test.goods.beans.GWriteDTO;
 import com.lec.sterre_test.goods.command.GCommand;
 import com.lec.sterre_test.goods.command.GDeleteCommand;
 import com.lec.sterre_test.goods.command.GListCommand;
+import com.lec.sterre_test.goods.command.GListCommand2;
 import com.lec.sterre_test.goods.command.GSelectCommand;
 import com.lec.sterre_test.goods.command.GUpdateCommand;
 import com.lec.sterre_test.goods.command.GViewCommand;
@@ -39,6 +40,13 @@ public class GoodsController {
 		C.sqlSession = sqlSession;
 	}
 
+	@RequestMapping("/goodsTopsix")
+	public String list2(Model model) {
+		command = new GListCommand2();
+		command.execute(model);
+		return "goods/goodsTopsix";
+	}
+	
 	@RequestMapping("/goodsList")
 	public String list(Model model) {
 		command = new GListCommand();
@@ -52,6 +60,13 @@ public class GoodsController {
 		command.execute(model);
 		return "goods/goodsClientList";
 	}
+	@RequestMapping("/showgoodspic")
+	public String showgoodspic(Model model) {
+		command = new GListCommand();
+		command.execute(model);
+		return "goods/showgoodspic";
+	}
+	
 	@RequestMapping("/goodsClientListCheck")
 	public String goodsClientListCheck(Model model) {
 		command = new GListCommand();

@@ -10,7 +10,7 @@
 			SELECT 
 				buyuid buyuid, 
 				username  username, 
-				goodsuid  goodsuid, 
+				goodsname  goodsname, 
 				buynum  buynum,
 				buydate  buydate
 			FROM 
@@ -24,7 +24,7 @@
 		SELECT 
 				buyuid buyuid, 
 				username  username, 
-				goodsuid  goodsuid, 
+				goodsname  goodsname, 
 				buynum  buynum,
 				buydate  buydate
 		FROM sr_buys 
@@ -46,7 +46,7 @@
 		SET 
 			buyuid  = #{a.buyuid} ,
 			username  = #{a.username} , 
-			goodsuid  = #{a.goodsuid},
+			goodsname  = #{a.goodsname},
 			buynum  = #{a.buynum},
 			buydate  = #{a.buydate}
 		WHERE buyuid = #{param1}

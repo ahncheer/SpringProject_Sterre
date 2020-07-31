@@ -18,6 +18,8 @@
 <link rel="stylesheet"	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/CSS/aboutSterre.css"/>
+
 
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath }/CSS/header.css" />
@@ -86,7 +88,7 @@
 					<li class="dropdown"><a data-toggle="dropdown"
 						class="dropdown-toggle" href="#">게시판 <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">후기 모아보기</a></li>
+							<li><a href="${pageContext.request.contextPath }/review/reviewAllList">후기 모아보기</a></li>
 							<li><a href="${pageContext.request.contextPath }/board/list">자유게시판</a></li>
 						</ul>
 					</li>

@@ -25,6 +25,43 @@
 				goodsuid DESC
 	</select>
 
+		<select id="select2" resultType="com.lec.sterre_test.goods.beans.GWriteDTO">
+			SELECT 
+				goodsuid goodsuid, 
+				goodsname  goodsname,
+				goodsprice  goodsprice, 
+				goodsContent  goodsContent, 
+				goodsregdate  goodsregdate,
+				goodsSort  goodsSort,
+				goodsCustom  goodsCustom,
+				goodsTotal  goodsTotal,
+				goodsLeft  goodsLeft,
+				goodsLike  goodsLike,
+				goodspic1  goodspic1,
+				goodspic2  goodspic2
+			FROM 
+			(
+			  SELECT 
+				goodsuid goodsuid, 
+				goodsname  goodsname,
+				goodsprice  goodsprice, 
+				goodsContent  goodsContent, 
+				goodsregdate  goodsregdate,
+				goodsSort  goodsSort,
+				goodsCustom  goodsCustom,
+				goodsTotal  goodsTotal,
+				goodsLeft  goodsLeft,
+				goodsLike  goodsLike,
+				goodspic1  goodspic1,
+				goodspic2  goodspic2
+			  FROM 
+			  	SR_GOODS
+			  ORDER BY 
+			  	goodsLeft DESC
+			 )
+			WHERE ROWNUM BETWEEN 1 and 8
+	</select>
+
 	<!-- view.do -->
 	<select id="goodsSelectByUid" resultType="com.lec.sterre_test.goods.beans.GWriteDTO">
 		SELECT 

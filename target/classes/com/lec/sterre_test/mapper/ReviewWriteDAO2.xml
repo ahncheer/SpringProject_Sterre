@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lec.sterre_test.review.beans.ReviewWriteDAO">
+
+
+	<insert id="reviewInsert" flushCache="true"
+		parameterType="com.lec.sterre_test.review.beans.ReviewWriteDTO"
+		keyProperty="reviewuid" useGeneratedKeys="true" keyColumn="reviewuid">
+		INSERT INTO sr_review
+			(reviewuid , username , goodsname , reviewcontent , reviewdate )
+		VALUES
+			(sr_review_SEQ.nextval, #{username},	#{goodsname}, #{reviewcontent}, SYSDATE)	
+	</insert>
+	
+ 
+<!--  
+	<insert id="insert" flushCache="true">
+		INSERT INTO test_write
+			(wr_uid, wr_subject, wr_content, wr_name)
+		VALUES
+			(test_write_seq.nextval, #{param1}, #{param2}, #{param3})		
+	</insert>
+ -->
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

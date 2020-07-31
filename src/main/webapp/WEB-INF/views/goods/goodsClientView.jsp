@@ -22,56 +22,45 @@
 </head>
 
 <style>
-.buybutton {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  float: left;
-}
-
-.buybutton1 {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #4CAF50;
-  border-radius: 10px;
-}
-
-.buybutton1:hover {
-  background-color: #4CAF50;
-  color: white;
-}
-
-
-
-.pinfo{
-    font-size: 18px;
-    color: #000000;
-    line-height: 40px;
-}
-
+	*{margin:0;padding:0;}
+	ul,li{list-style:none;}
+	#slide{width: 50%; height: 500px; display: inline-block; overflow:hidden;}
+	#slide ul{width:400%;height:100%;transition:1s;}
+	#slide ul:after{content:"";display:block;clear:both;}
+	#slide li{float:left;width:25%;height:100%;}
+	#slide li:nth-child(1){background:#faa;}
+	#slide li:nth-child(2){background:#ffa;}
+	#slide input{display:none;}
+	#slide label{display:inline-block;vertical-align:middle;width:10px;height:10px;border:2px solid #666;background:#fff;transition:0.3s;border-radius:50%;cursor:pointer;}
+	#slide .pos{text-align:center;position:absolute;bottom:30px;left: -20%;width:100%;text-align:center;}
+	#pos1:checked~ul{margin-left:0%;}
+	#pos2:checked~ul{margin-left:-100%;}
+	#pos1:checked~.pos>label:nth-child(1){background:#666;}
+	#pos2:checked~.pos>label:nth-child(2){background:#666;}
 </style>
-
-
 
 <body>
   <%@ include file="../header.jsp" %>
 
 <br><br>
-<div id = "product" style="margin-left: 10%; margin-right: 10%;">
-	<div id="productpic" style="background-color: white; width: 50%; height: 500px; display: inline-block;">
-		<img src="${list[0].goodspic1 }" style="width: 400px; height: 500px"/>
-	</div>
+	
+
+
+<div id="slide" style="width: 36%; height: 500px; display: inline-block;margin-left: 12%" >
+	<input type="radio" name="pos" id="pos1" checked>
+	<input type="radio" name="pos" id="pos2">
+	<ul>
+		<li ><img src="${list[0].goodspic1 }" style="width: 100%; height: 500px;"/></li>
+		<li><img src="${list[0].goodspic2 }" style="width: 100%; height: 500px;"/></li>
+	</ul>
+	<p class="pos" style="left: -15%;bottom:120px;">
+		<label for="pos1"></label>
+		<label for="pos2"></label>
+	</p>
+</div>
 	
 	
-	<div style="background-color: white; width: 50%; height: 500px; padding-left: 40px; display: inline-block;
+<div style="background-color: white; width: 50%; height: 500px; padding-left: 40px; display: inline-block;
     border-left: 1px solid grey; float: right;">
     	<br><br>
 		<span style="font-size: 30px;line-height: 32px; color: #000000;" >${list[0].goodsname }<br></span>
@@ -99,11 +88,10 @@
 			
 			<c:when test="${not empty user_id }">
 				<button class="buybutton buybutton1"
-			onclick="location.href = '${pageContext.request.contextPath }/buy/buyWrite?goodsuid=${list[0].goodsuid}&goodsprice=${list[0].goodsprice}' " >구매하기</button>
+			onclick="location.href = '${pageContext.request.contextPath }/buy/buyWrite?goodsname=${list[0].goodsname}&goodsprice=${list[0].goodsprice}' " >구매하기</button>
 			</c:when>		 
 		 
 		 </c:choose>
-		</div>
 	</div>
 </div>
 

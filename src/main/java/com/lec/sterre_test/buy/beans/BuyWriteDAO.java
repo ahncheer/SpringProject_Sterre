@@ -9,7 +9,8 @@ import org.mybatis.spring.annotation.MapperScan;
 public interface BuyWriteDAO {
 	public List<BuyWriteDTO> select();
 	public int buyInsert(final BuyWriteDTO dto);
-	public int buyInsert(int buyuid, String username, int goodsuid, int buynum);
+	public int buyInsert2(final BuyWriteDTO dto);
+	public int buyInsert(int buyuid, String username, String goodsname, int buynum);
 	//public BWriteDTO readByuseruid(final int useruid);
 	public BuyWriteDTO buySelectByUid(final int buyuid);
 	public int buyUpdate(final BuyWriteDTO dto);

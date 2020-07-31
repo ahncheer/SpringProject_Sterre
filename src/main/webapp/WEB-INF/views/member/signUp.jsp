@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="ko">
+<html >
 <head>
 <meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css?family=Ubuntu"	rel="stylesheet">
@@ -57,10 +57,11 @@ function chkSubmit(){  // 폼 검증
 	<p id="inputbox"> &#9;주소:</p><br> <textarea class="un" name="userAdd" style="resize: vertical; margin-left: 145px;height: 80px;}"></textarea>
 	
     
+    
     <hr>
     <div style="margin-left: 10%;">
-		<input type="checkbox" id="c1" name="important"/><label for="c1"><span></span><a href="#"> &#9;  약관동의(필수)</a></label><br>
-		<input type="checkbox" id="c1" name="useralarm" value="1"/> <label for="c2"><span></span><a href="#"> &#9; 푸쉬 동의여부(선택)</a></label><br>
+		<input type="checkbox" id="c1" name="important"/><label for="c1"><span></span><a href="#"> &nbsp;&nbsp;&nbsp;&nbsp;약관동의(필수)</a></label><br>
+		<input type="checkbox" id="c1" name="useralarm" value="1"/> <label for="c2"><span></span><a href="#"> &nbsp;&nbsp;&nbsp;푸쉬 동의여부(선택)</a></label><br>
 	</div>
 	
 	<br>
@@ -83,7 +84,10 @@ function chkSubmit(){  // 폼 검증
 </body>
 </html>
 
+<style>
 
+
+</style>
 
 
 

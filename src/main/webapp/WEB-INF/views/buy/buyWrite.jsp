@@ -35,7 +35,7 @@ function chkSubmit(){  // 폼 검증
 <h2>규매</h2>
 <h2>${user_id } </h2>
 <% 	
-	int goodsuid = Integer.parseInt(request.getParameter("goodsuid"));
+	String goodsname = request.getParameter("goodsname");
 	int goodsprice = Integer.parseInt(request.getParameter("goodsprice"));
  %>
  확인용 ->  ${param.goodsuid } <br>${param.goodsprice }<br>
@@ -43,7 +43,7 @@ function chkSubmit(){  // 폼 검증
 <form name="frm" action="buyWriteOk" method="post" onsubmit="return chkSubmit()">
 
 회원이름: <input type="text" name="username" value="${user_id }"/><br>
-구매할저거번호: <input type=number" name="goodsuid" value="${param.goodsuid }"/><br>
+구매할저거번호: <input type=text" name="goodsname" value="${param.goodsname }"/><br>
 개수 <input type="number" name="buynum" value="1"/><br>
 구매 가격 : ${param.goodsprice }
 <input type="submit" value="구매하시겠습니까?"/>

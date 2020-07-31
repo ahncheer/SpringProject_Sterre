@@ -5,24 +5,26 @@ import java.sql.Timestamp;
 public class BuyWriteDTO {
 	private int buyuid;  
 	private String username;    
-	private int goodsuid;  
+	private String goodsname;  
 	private int buynum; 
 	private Timestamp buydate;
+	
+	
 	
 	public BuyWriteDTO() {
 		super();
 	}
-	public BuyWriteDTO(int buyuid, String username, int goodsuid, int buynum, Timestamp buydate) {
+	public BuyWriteDTO(int buyuid, String username, String goodsname, int buynum, Timestamp buydate) {
 		super();
 		this.buyuid = buyuid;
 		this.username = username;
-		this.goodsuid = goodsuid;
+		this.goodsname = goodsname;
 		this.buynum = buynum;
 		this.buydate = buydate;
 	}
 	@Override
 	public String toString() {
-		return "BuyWriteDTO [buyuid=" + buyuid + ", username=" + username + ", goodsuid=" + goodsuid + ", buynum="
+		return "BuyWriteDTO [buyuid=" + buyuid + ", username=" + username + ", goodsname=" + goodsname + ", buynum="
 				+ buynum + ", buydate=" + buydate + "]";
 	}
 	public int getBuyuid() {
@@ -37,11 +39,11 @@ public class BuyWriteDTO {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	public int getGoodsuid() {
-		return goodsuid;
+	public String getGoodsname() {
+		return goodsname;
 	}
-	public void setGoodsuid(int goodsuid) {
-		this.goodsuid = goodsuid;
+	public void setGoodsname(String goodsname) {
+		this.goodsname = goodsname;
 	}
 	public int getBuynum() {
 		return buynum;
@@ -55,6 +57,8 @@ public class BuyWriteDTO {
 	public void setBuydate(Timestamp buydate) {
 		this.buydate = buydate;
 	}
+	
+	
 	
 	
 	

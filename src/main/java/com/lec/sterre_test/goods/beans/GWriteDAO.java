@@ -8,6 +8,7 @@ import org.mybatis.spring.annotation.MapperScan;
 @MapperScan
 public interface GWriteDAO {
 	public List<GWriteDTO> select();
+	public List<GWriteDTO> select2();
 	public int goodsInsert(final GWriteDTO dto);
 //	public int goodsInsert(String goodsname, int goodsprice, String goodsContent, int goodsSort, int goodsCustom
 //			int goodsTotal, int goodsLeft, int goodsLike, String goodspic1, String goodspic2);

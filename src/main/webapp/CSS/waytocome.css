@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+/*오시는 길*/
+.directionsDiv{width:1170px; margin:50px auto 0;}
+.directionsDiv .mapDiv .mobile{display:none;}
+.directionsDiv .localT:before{display:block; content:""; width:16px; height:30px; background:url("/common/images/icon/directions_icon1.png") no-repeat 0 center; position:absolute;top:0;left:0;}
+.directionsDiv .localT{font-size:20px; color:#000; line-height:30px; position:relative; padding-left:25px; margin-top:50px;}
+.directionsDiv .clearDiv{border-top:1px solid #e1e1e1; margin-top:20px; padding-top:40px;}
+.directionsDiv .clearDiv:after{content:""; display:block; clear:both;}
+.directionsDiv .clearDiv .leftDiv{float:left; width:500px;}
+.directionsDiv .clearDiv .rightDiv{float:right; width:600px;}
+.directionsDiv .clearDiv div .tit{font-size:20px; font-family:'NotoSans-Bold', '맑은 고딕', 'Malgun Gothic', sans-serif; color:#000}
+.directionsDiv .clearDiv div ul{margin-top:20px;}
+.directionsDiv .clearDiv div ul li{font-size:16px; line-height:30px; margin-top:5px;}
+.directionsDiv .clearDiv div ul li:first-child{margin-top:0;}
+.directionsDiv .clearDiv div ul li p{display:inline-block;}
+.directionsDiv .clearDiv .leftDiv ul li .label{width:100px;}
+.directionsDiv .clearDiv .leftDiv ul li .label span{display:inline-block; width:25px; height:25px; border-radius:12.5px; margin-right:10px; font-size:15px; font-family:'NotoSans-Medium', '맑은 고딕', 'Malgun Gothic', sans-serif; line-height:25px; color:#fff; text-align:center;}
+.directionsDiv .clearDiv .leftDiv ul li:first-child .label{color:#5ab354}
+.directionsDiv .clearDiv .leftDiv ul li:first-child .label span{background:#5ab354}
+.directionsDiv .clearDiv .leftDiv ul li:nth-of-type(3) .label{color:#a71e31;}
+.directionsDiv .clearDiv .leftDiv ul li:nth-of-type(3) .label span{background:#a71e31; width:50px;}
+.directionsDiv .clearDiv .leftDiv ul li:nth-of-type(2) .label{color:#d1a62c;}
+.directionsDiv .clearDiv .leftDiv ul li:nth-of-type(2) .label span{background:#d1a62c;}
+.directionsDiv .clearDiv .rightDiv ul li .label{display:inline-block; width:50px; height:26px; line-height:26px; border-radius:15px; font-size:15px; font-family:'NotoSans-Medium', '맑은 고딕', 'Malgun Gothic', sans-serif; color:#fff; text-align:center; margin-right:18px;}
+.directionsDiv .clearDiv .rightDiv ul li:first-child .label{background:#62af1e}
+.directionsDiv .clearDiv .rightDiv ul li:nth-of-type(2) .label{background:#d63945}
+.directionsDiv .clearDiv .rightDiv ul li:nth-of-type(3) .label{background:#366fc6}
+.directionsDiv .clearDiv .rightDiv ul li:nth-of-type(4) .label{background:#9e7940}
+/*.directionsDiv .grayDiv{margin-top:50px; padding:40px 0 40px 100px; background:#f8f8f8 url("/common/images/icon/directions_icon2.png") no-repeat 30px center; }*/
+.directionsDiv .infoArea .tit{font-size:22px; color:#000; font-family:'NotoSans-Bold', '맑은 고딕', 'Malgun Gothic', sans-serif; margin:50px 0 30px;}
+.directionsDiv .infoArea .tableDiv:after{content:""; display:block; clear:both;}
+.directionsDiv .infoArea .tableDiv > div{border-top:2px solid #000; width:574px; float:left;}
+.directionsDiv .infoArea .tableDiv > div.t2{width: 100%;}
+.directionsDiv .infoArea .tableDiv > div table{font-size:16px; line-height:60px; text-align:center;}
+.directionsDiv .infoArea .tableDiv > div table thead th{font-family:'NotoSans-Bold', '맑은 고딕', 'Malgun Gothic', sans-serif; color:#000;  background:#f8f8f8; border-bottom:1px solid #e1e1e1;}
+.directionsDiv .infoArea .tableDiv > div table tbody th{border-bottom:1px solid #e1e1e1; }
+.directionsDiv .infoArea .tableDiv > div table tbody td{font-family:'NotoSans-Bold', '맑은 고딕', 'Malgun Gothic', sans-serif; color:#000; border-bottom:1px solid #e1e1e1; border-left:1px solid #e1e1e1;}
+.directionsDiv .infoArea .tableDiv > div.t1 table tbody th ,.directionsDiv .infoArea .tableDiv > div.t1 table tbody td{height:120px; vertical-align:middle;}
+.directionsDiv .infoArea .bPurpleBtn{padding:0 20px; height:32px; line-height:30px; font-size:15px; font-family:'NotoSans-Medium', '맑은 고딕', 'Malgun Gothic', sans-serif;}
+
+
+
+
+
+
+
+
+
+
+
+
+

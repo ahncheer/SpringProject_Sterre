@@ -16,15 +16,17 @@
 <body>
   <%@ include file="../header.jsp" %>
 
-<h1>myPage</h1>
-${pageContext.request.contextPath }/buy/buyList?username=${user_id }
+  <h1 style="text-align: center;color: #777" class="text-shadow-pop-br"><b>myPage</b></h1>
 
-<div style="background-color: #ddd; width : 50%;height: 300px">
-	<c:import url="http://localhost:8082/sterre_test/buy/buyList" >
-		<c:param name="username" value="${user_id }"/>
-	</c:import>
+<div style="background-color: #ddd; width : 80%; margin-left:10%; height: 300px">
+	<c:import url="/buy/buyList?username=${user_id }" />
 
 </div>
-wdwd
+
+
+<div style="background-color: #ddd; width : 80%;margin-left:10%; height: 300px">
+	<c:import url="/review/reviewList?username=${user_id }" />
+</div>
+
 </body>
 </html>

@@ -17,8 +17,8 @@ CREATE TABLE sr_goods
 	goodsregdate DATE DEFAULT SYSDATE,
 	goodsSort number NOT NULL, -- 상품종류(에어팟케이스/핸드폰케이스)
 	goodsCustom number NOT NULL, -- 일반?글귀?그림?
-	goodsTotal number NOT NULL, -- 지금까지 판매된 수량
-	goodsLeft number NOT NULL, -- 남은 수량
+	goodsTotal number NOT NULL, -- 전체 수량
+	goodsLeft number NOT NULL, -- 지금까지 판매된 수량
 	goodsLike number DEFAULT '10', --좋아요!
 	goodspic1 varchar2(100) NOT NULL,
 	goodspic2 varchar2(100),
@@ -29,7 +29,7 @@ CREATE TABLE sr_buys
 (
 	buyuid NUMBER PRIMARY KEY,
 	username varchar2(50) NOT NULL,
-	goodsuid number NOT NULL,
+	goodsname varchar2(100) NOT NULL,
 	buynum NUMBER NOT NULL,
 	buydate DATE DEFAULT SYSDATE
 );
@@ -78,7 +78,7 @@ VALUES (sr_goods_SEQ.nextval, '버즈케이스-주문제작', 10000, '버즈를 
 	
 	
 INSERT INTO sr_buys
-	values(sr_buys_SEQ.nextval,'asw', 2, 1, sysdate);
+	values(sr_buys_SEQ.nextval,'asw', '버즈케이스', 1, sysdate);
 	
 	
 SELECT buyuid buyuid, username  username, goodsuid  goodsuid, buynum  buynum, buydate  buydate
@@ -87,11 +87,22 @@ FROM sr_buys WHERE username = 'admin';
 	
 	
 	
+SELECT goodsLeft FROM SR_GOODS WHERE goodsname = '버즈케이스-주문제작';
+
+UPDATE SR_GOODS 
+ SET goodsLeft = (SELECT goodsLeft FROM SR_GOODS WHERE goodsname = '버즈케이스-주문제작')-1
+ WHERE goodsname = '버즈케이스-주문제작';
 	
 	
-	
-	
-	
-	
+SELECT *
+FROM 
+ (
+  SELECT *
+  FROM SR_GOODS
+  ORDER BY goodsLeft DESC
+ )
+WHERE ROWNUM <= 3;
+
+
 	
 	

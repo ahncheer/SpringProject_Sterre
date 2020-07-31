@@ -40,8 +40,8 @@
 			<security:form-login login-page="/customLogin"
 				authentication-success-handler-ref="customLoginSuccess"/>
 			
-			<!-- <security:access-denied-handler error-page="/accessError"/> -->
-			<security:access-denied-handler ref="customAccessDenied"/>
+			 <security:access-denied-handler error-page="/accessError"/> 
+			<!-- <security:access-denied-handler ref="customAccessDenied"/> -->
 			
 			<security:logout logout-url="/customLogout" invalidate-session="true"/>
 		

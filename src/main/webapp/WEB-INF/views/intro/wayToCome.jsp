@@ -21,7 +21,7 @@ li, ol, ul {
 
 <body>
 <%@ include file="../header.jsp" %>
-  <h1 style="text-align: center;color: #777" class="text-shadow-pop-br"><b>Way To Come</b></h2>
+  <h1 style="text-align: center;color: #777" class="text-shadow-pop-br"><b>Way To Come</b></h1>
 <hr class="featurette-divider" style="margin: 3rem 0;">
 
 <div id="map" style="margin-left:15%; width:70%;height:350px;"></div>

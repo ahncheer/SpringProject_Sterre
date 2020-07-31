@@ -110,7 +110,7 @@
 	
 	
 	<delete id="goodsDeleteByUid" flushCache="true">
-		DELETE FROM sr_buy WHERE goodsuid = #{goodsuid}
+		DELETE FROM sr_goods WHERE goodsuid = #{goodsuid}
 	</delete>
 
 <!-- 

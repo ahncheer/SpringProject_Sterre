@@ -52,7 +52,7 @@ table, th, td {
 			
 			<c:forEach var="dto" items="${list }">
 			<tr>
-				<td>${dto.goodsuid }</td>
+				<th>${dto.goodsuid }</td>
 				<td><a href="goodsView?goodsuid=${dto.goodsuid }">${dto.goodsname }</a></td>
 				<td>${dto.goodsprice }</td>
 				<td>${dto.goodsContent }</td>
@@ -78,9 +78,108 @@ table, th, td {
 </html>
 
 
+<table summary="Submitted table designs"> 
+			<caption>Table designs</caption> 
+			<thead> 
+				<tr> 
+					<th scope="col">고유번호</th> 
+					<th scope="col">이름</th> 
+					<th scope="col">가격</th> 
+					<th scope="col">설명</th> 
+					<th scope="col">등록일</th> 
+					<th scope="col">판매가능수량</th> 
+					<th scope="col">판매수량</th> 
+					<th scope="col">좋아요</th> 
+					<th scope="col">사진1</th> 
+					<th scope="col">사진2</th> 
+				</tr> 
+			</thead>	
+			<tbody> 
+				<tr> 
+					<th scope="row" id="r97"><a href="index.php?css=97#r97">TagBox</a></th> 
+					<td><a href="http://www.tagbox.de">TagBox</a></td> 
+					<td>Deutschland</td> 
+					<td>Table design based on the fresh TagBox style.</td> 
+					<td>Table design based on the fresh TagBox style.</td> 
+					<td>Table design based on the fresh TagBox style.</td> 
+					<td>Table design based on the fresh TagBox style.</td> 
+					<td><a href="http://www.tagbox.de/style/tagbox.css" title="Download the TagBox CSS file">Download</a></td> 
+					<td><a href="http://www.tagbox.de/style/tagbox.css" title="Download the TagBox CSS file">Download</a></td> 
+				</tr> 
+				
+			</tbody>		
+			<tfoot> 
+				<tr> 
+					<th scope="row">Total</th> 
+					<td colspan="4">98 designs</td> 
+				</tr> 
+			</tfoot> 
+		</table>
 
 
 
+<style>
+
+
+table,th,td{
+	border:1px solid #666;
+	border-collapse:collapse;
+	/* overflow:scroll;*/
+}
+table{
+	border:none;
+	border-top:1px solid #000;
+}
+thead th{
+	background:url(greychrome.gif) top left repeat-x #fff;
+	padding:5px 10px;
+	font-size:90%;
+	text-transform:uppercase;
+	color:#333;
+}
+tbody td,tbody th{
+	font-size:85%;
+	padding:5px 10px;
+	background:#eee;
+}
+tbody th{
+	background:url(bluechrome.gif) top left repeat-x #fff;
+	color:#333;
+}
+tbody tr.odd td{
+	background:#ddd;
+}
+tbody tr.odd th{
+	background:url(greenchrome.gif) top left repeat-x #fff;
+	color:#333;
+}
+tfoot td,tfoot th{
+	border:none;
+	padding-top:10px;
+}
+caption{
+	font-family:Tahoma;
+	text-align:left;
+	text-transform:uppercase;
+	font-size:130%;
+	padding:10px 0;
+	color:#036;
+}
+table a:link{
+	color:#369;
+}
+table a:visited{
+	color:#036;
+}
+table a:hover{
+	color:#000;
+	text-decoration:none;
+}
+table a:active{
+	color:#000;
+}
+
+</style>
 
 
 

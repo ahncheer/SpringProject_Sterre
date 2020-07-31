@@ -20,6 +20,12 @@ import com.lec.sterre_test.goods.command.GUpdateCommand;
 import com.lec.sterre_test.goods.command.GViewCommand;
 import com.lec.sterre_test.goods.command.GWriteCommand;
 
+import java.io.File;
+
+
+import javax.annotation.Resource;
+
+
 @Controller
 @RequestMapping("/goods")
 public class GoodsController {
@@ -28,6 +34,7 @@ public class GoodsController {
 	
 	// MyGabatis
 	private SqlSession sqlSession;
+	
 	
 	public GoodsController() {
 		super();
@@ -79,7 +86,7 @@ public class GoodsController {
 	}
 	
 	@PostMapping("/goodsWriteOk")
-	public void writeOk(GWriteDTO dto, Model model) {
+	public void writeOk(GWriteDTO dto, Model model){
 		model.addAttribute("dto", dto);
 		new GWriteCommand().execute(model);
 //		return "goods/goodsWriteOk";

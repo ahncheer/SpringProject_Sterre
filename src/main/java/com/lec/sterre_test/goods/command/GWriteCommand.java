@@ -22,6 +22,8 @@ public class GWriteCommand implements GCommand {
 //		int result = dao.insert(dto);
 //		model.addAttribute("result", result);
 		
+		
+		
 		// MyBatis 사용
 		GWriteDAO dao = C.sqlSession.getMapper(GWriteDAO.class);
 		model.addAttribute("result", dao.goodsInsert(dto));
@@ -34,6 +36,11 @@ public class GWriteCommand implements GCommand {
 		
 		
 	}
+	
+	
+	
+		
+		
 
 }
 

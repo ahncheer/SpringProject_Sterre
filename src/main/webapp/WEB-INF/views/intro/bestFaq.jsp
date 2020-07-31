@@ -15,7 +15,7 @@
 <body>
 	<%@ include file="../header.jsp"%>
 	
-	  <h1 style="text-align: center;color: #777" class="text-shadow-pop-br"><b>best FAQ</b></h2>
+	  <h1 style="text-align: center;color: #777" class="text-shadow-pop-br"><b>best FAQ</b></h1>
 	  
 	 <br>&nbsp;&nbsp;
 		<section style="padding-left:10%; padding-right:10%;  background-color: #efefef;border-radius: 15px;">

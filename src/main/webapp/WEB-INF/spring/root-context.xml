@@ -15,7 +15,6 @@
 		<beans:property name="username" value="sterre0316"/>
 		<beans:property name="password" value="star0316"/>
 	</beans:bean>
-	
 
 </beans>
 

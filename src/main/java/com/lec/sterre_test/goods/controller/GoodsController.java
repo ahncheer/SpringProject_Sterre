@@ -1,13 +1,26 @@
 package com.lec.sterre_test.goods.controller;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Calendar;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.multipart.MultipartRequest;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import com.lec.sterre_test.goods.C;
 import com.lec.sterre_test.goods.beans.GWriteDTO;
@@ -20,14 +33,10 @@ import com.lec.sterre_test.goods.command.GUpdateCommand;
 import com.lec.sterre_test.goods.command.GViewCommand;
 import com.lec.sterre_test.goods.command.GWriteCommand;
 
-import java.io.File;
-
-
-import javax.annotation.Resource;
 
 
 @Controller
-@RequestMapping("/goods")
+@RequestMapping(value="/goods" ,method= {RequestMethod.GET, RequestMethod.POST})
 public class GoodsController {
 	
 	private GCommand command;
@@ -91,7 +100,15 @@ public class GoodsController {
 		new GWriteCommand().execute(model);
 //		return "goods/goodsWriteOk";
 	}
-	
+
+	//
+	//@RequestMapping(value = "/goodsWriteOk",  method= {RequestMethod.GET, RequestMethod.POST})
+
+
+		
+		
+		
+		
 	@RequestMapping("/goodsClientView")
 	public String view2(int goodsuid, Model model) {
 		model.addAttribute("goodsuid", goodsuid);
@@ -126,6 +143,38 @@ public class GoodsController {
 		new GDeleteCommand().execute(model);
 		return "goods/goodsDeleteOk";
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }
 

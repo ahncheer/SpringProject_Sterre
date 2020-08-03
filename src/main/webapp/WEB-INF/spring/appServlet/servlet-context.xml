@@ -27,7 +27,6 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="com.lec.sterre_test" />
-	<context:component-scan base-package="com.sterre.utils" />
 
 
 	<!-- JdbcTemplate -->
@@ -59,6 +58,7 @@
 		<beans:property name="transactionManager" ref="transactionManager"/>
 	</beans:bean>
 	
+	
+	
 
-			
 </beans:beans>

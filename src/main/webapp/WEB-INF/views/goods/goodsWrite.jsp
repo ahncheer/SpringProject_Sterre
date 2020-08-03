@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="UTF-8">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
 <title>글작성</title>
 </head>
 <script>
@@ -49,7 +49,7 @@ function chkSubmit(){  // 폼 검증
     <div class="container">
         <div class="row">
             <div class="col-md-offset-3 col-md-6">
-                <form class="form-horizontal" name="frm" action="goodsWriteOk" method="post" onsubmit="return chkSubmit()" >
+                <form class="form-horizontal" name="frm" action="goodsWriteOk" method="post" onsubmit="return chkSubmit()">
                     <div class="header">물건 등록</div>
                     <div class="form-content">
                     
@@ -128,7 +128,6 @@ function chkSubmit(){  // 폼 검증
 	                        <input type="file" id="ex_filename1" class="upload-hidden1" accept="image/*" onchange="imgfileCheck2(this)" name="goodspic1"> 
 	                        </div>
 						  </div>
-                        
 						  <div class="col-sm-6">
 	                        <div class="filebox2"> 
 	                        <input class="upload-name2" value="파일선택" disabled="disabled" style="width: 150px;font-size: 15px; height: 33px; padding-left: 10px;"> 
@@ -150,7 +149,6 @@ function chkSubmit(){  // 폼 검증
                         </div></div>
                         </div>
 						
-						<%=request.getRealPath("/") %>
 						
                         <div class="clearfix">
                             <button type="submit" class="btn btn-default"> Register</button>

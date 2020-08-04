@@ -26,7 +26,6 @@
 
 
 /* 글 목록 */
-#list table {width: 100%;}
 
 #list table, #list th, #list td {
 	border: 1px solid #1c5559;

@@ -53,6 +53,12 @@ public class ReviewController {
 		return "review/reviewAllList";
 	}
 	
+	@RequestMapping("/reviewAdminList")
+	public String alllist2(Model model) {
+		command = new ReviewListCommand();
+		command.execute(model);
+		return "review/reviewAdminList";
+	}
 	
 	@RequestMapping("/reviewClientList")
 	public String clientList(Model model) {

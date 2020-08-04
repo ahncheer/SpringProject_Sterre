@@ -23,24 +23,20 @@ table, th, td {
 </style>
 </head>
 <body>
-	<%@ include file="../header.jsp" %>
-	
 
+ 	<% int reviewCnt = 0; %>
  <div class="content">
 	<div id="list">
 	
-			  <h1 style="text-align: center;color: #777" class="text-shadow-pop-br"><b>후기 전체 목록</b></h1>
-			<hr>
 			
 			
 			<table>
 				<tr>
-					<th>후기번호</th>
-					<th>구매자명</th>
-					<th>상품명</th>
-					<th>후기내용</th>
-					<th>후기작성일</th>
-					<th>상품 사진</th>
+					<th style="background-color: #fff">후기번호</th>
+					<th id="twowidth" style="background-color: #fff">구매자명</th>
+					<th id="twowidth" style="background-color: #fff">상품명</th>
+					<th id="threewidth" style="background-color: #fff">후기내용</th>
+					<th id="twowidth" style="background-color: #fff">후기작성일</th>
 				</tr>
 		
 			<c:choose>
@@ -51,23 +47,64 @@ table, th, td {
 				<c:forEach var="dto" items="${list }">
 					<tr>
 						<td>${dto.reviewuid }</td>
-						<td>${dto.username }</td>
-						<td>${dto.goodsname }</td>
-						<td>${dto.reviewcontent }</td>
-						<td>${dto.reviewdate }</td>
-						<td> <c:import url="/goods/showgoodspic?goodsname=${dto.goodsname }" /> </td>
-					</tr>			
+						<td id="twowidth" >${dto.username }</td>
+						<td id="twowidth">${dto.goodsname }</td>
+						<td id="threewidth">${dto.reviewcontent }</td>
+						<td id="twowidth" >${dto.reviewdate }</td>
+					</tr>	
+					<% reviewCnt++; %>		
+							
 				</c:forEach>
 				</c:otherwise>
 			</c:choose>
-	
+				<div style="width: 100%;padding: 5px;">등록된 후기 : <%=reviewCnt %>개 <br></div> 
 			</table>
 	</div>
 </div>
 
     
     
-    
+   
+<style>
+
+#threewidth {
+background-color: #ddd;
+width: 230px;
+word-break: break-all;
+}
+
+#twowidth {
+background-color: #ddd;
+width: 80px;
+word-break: break-all;
+}
+
+
+ table,  th, td{
+ table-layout:fixed; 
+	border:1px solid #666;
+	border-collapse:collapse;
+	font-size: 10px;
+	/* overflow:scroll; */
+
+	
+}
+ thead th{
+	padding:3px 5px;
+	text-transform:uppercase;
+	color:#333;
+	width: 40px;
+}
+ tbody td, tbody th{
+	padding:5px 10px;
+	background:#eee;
+	width: 40px;
+}
+ tbody th{
+	color:#333;
+}
+
+</style>   
     
 </body>
 </html>

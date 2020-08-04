@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="UTF-8">
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" >
@@ -49,7 +49,8 @@ function chkSubmit(){  // 폼 검증
     <div class="container">
         <div class="row">
             <div class="col-md-offset-3 col-md-6">
-                <form class="form-horizontal" name="frm" action="goodsWriteOk" method="post" onsubmit="return chkSubmit()">
+                <form class="form-horizontal" name="frm" action="goodsWriteOk?${_csrf.parameterName }=${_csrf.token }" method="post" onsubmit="return chkSubmit()" >
+                  <!--  enctype="multipart/form-data" -->
                     <div class="header">물건 등록</div>
                     <div class="form-content">
                     
@@ -61,7 +62,7 @@ function chkSubmit(){  // 폼 검증
                             </div>
                             <div class="col-sm-6">
                                 <label class="control-label" for="exampleInputName2"><i class="fa fa-envelope-o"></i></label>
-                                <input class="form-control" id="exampleInputName2" placeholder="가격" type="number" name="goodsprice">
+                                <input class="form-control" id="exampleInputName2" placeholder="가격" type="number" name="goodsprice" value=1000>
                             </div>
                         </div>
                         
@@ -69,7 +70,7 @@ function chkSubmit(){  // 폼 검증
                        <div class="form-group">
                             <div class="col-sm-12">
                                 <label class="control-label" for="exampleInputName2"><i class="fa fa-calendar"></i></label>
-                                <textarea class="form-control" placeholder="상품 설명" name="goodsContent"></textarea>
+                                <textarea class="form-control" placeholder="상품 설명" name="goodsContent">asddas</textarea>
                             </div>
                         </div>
                         
@@ -106,15 +107,15 @@ function chkSubmit(){  // 폼 검증
                         <div class="form-group">
                             <div class="col-sm-4">
                                 <label class="control-label" for="exampleInputName2"><i class="fa fa-user"></i></label>
-                                <input class="form-control" id="exampleInputName2" placeholder="전체 개수" type="number" name="goodsTotal">
+                                <input class="form-control" id="exampleInputName2" placeholder="전체 개수" type="number" name="goodsTotal" value=1000>
                             </div>
                             <div class="col-sm-4">
                                 <label class="control-label" for="exampleInputName2"><i class="fa fa-envelope-o"></i></label>
-                                <input class="form-control" id="exampleInputName2" placeholder="판매된 개수  디폴트 0" type="number" name="goodsLeft">
+                                <input class="form-control" id="exampleInputName2" placeholder="판매된 개수  디폴트 0" type="number" name="goodsLeft" value=1000>
                             </div>
                             <div class="col-sm-4">
                                 <label class="control-label" for="exampleInputName2"><i class="fa fa-envelope-o"></i></label>
-                                <input class="form-control" id="exampleInputName2" placeholder="좋아요 개수 디폴트 0" type="number" name="goodsLike">
+                                <input class="form-control" id="exampleInputName2" placeholder="좋아요 개수 디폴트 0" type="number" name="goodsLike" value=1000>
                             </div>
                         </div>
                         
@@ -154,7 +155,6 @@ function chkSubmit(){  // 폼 검증
                             <button type="submit" class="btn btn-default"> Register</button>
                         </div>
                     </div>
-                     <input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />  
                     
                 </form>
             </div>

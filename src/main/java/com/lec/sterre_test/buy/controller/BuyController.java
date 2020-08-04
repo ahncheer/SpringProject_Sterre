@@ -46,6 +46,13 @@ public class BuyController {
 		return "buy/buyList";
 	}
 	
+	@RequestMapping("/buyAllList")
+	public String list2(Model model) {
+		command = new BuyListCommand();
+		command.execute(model);
+		return "buy/buyAllList";
+	}
+	
 	@RequestMapping("/buyClientList")
 	public String clientList(Model model) {
 		command = new BuyListCommand();

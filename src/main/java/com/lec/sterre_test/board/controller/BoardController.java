@@ -47,6 +47,13 @@ public class BoardController {
 		return "board/list";
 	}
 	
+	@RequestMapping("/BoardAllList")
+	public String list2(Model model) {
+		command = new BListCommand();
+		command.execute(model);
+		return "board/BoardAllList";
+	}
+	
 	@RequestMapping("/write")
 	public String write(Model model) {
 		return "board/write";

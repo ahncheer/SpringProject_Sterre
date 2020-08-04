@@ -40,11 +40,11 @@ public class MemberController {
 		C.sqlSession = sqlSession;
 	}
 
-	@RequestMapping("/memList")
+	@RequestMapping("/memAllList")
 	public String list(Model model) {
 		command = new MListCommand();
 		command.execute(model);
-		return "member/memList";
+		return "member/memAllList";
 	}
 	
 //	@RequestMapping("/memwrite")

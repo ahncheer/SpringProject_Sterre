@@ -18,17 +18,10 @@
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 <title>글 목록</title>
-<style>
-table {width: 100%;}
-table, th, td {
-	border: 1px solid black;
-	border-collapse: collapse;
-}
-</style>
+
 </head>
 <body>
 
-<div id="list">
 		<c:choose>
 			<c:when test="${empty list || fn:length(list) == 0}">
 			</c:when>
@@ -37,7 +30,7 @@ table, th, td {
 			<c:forEach var="dto" items="${list }">
 			
 				<c:choose><c:when test="${dto.goodsname eq param.goodsname}">
-					<div><img src ="${dto.goodspic1 }" style="width:300px; height: 400px;"/></div>
+					<div><img src ="${dto.goodspic1 }" style="width:180px; height: 240px;"/></div>
 				</c:when></c:choose>
 					
 			</c:forEach>
@@ -46,7 +39,6 @@ table, th, td {
 		</c:choose>
 
 		<br>
-</div>
 </body>
 </html>
 

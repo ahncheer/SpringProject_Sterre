@@ -48,7 +48,7 @@ function chkSubmit(){  // 폼 검증
 구매상품 이름: ${param.goodsname }
 <input type="hidden" name="goodsname" value="${param.goodsname }"/><br>
 
-후기 입력 : <textarea name="reviewcontent"  value="후기 입력"></textarea>
+후기 입력 : <textarea name="reviewcontent"></textarea>
 
 <input type="submit" value="후기 작성"/>
 

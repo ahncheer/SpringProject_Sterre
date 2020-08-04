@@ -38,6 +38,7 @@ table, th, td {
 					<th id="threewidth" style="background-color: #fff">상품명</th>
 					<th style="background-color: #fff">구매개수</th>
 					<th id="threewidth" style="background-color: #fff">구매일</th>
+					<th id="twowidth" style="background-color: #fff">후기 작성</th>
 					
 				</tr>
 		
@@ -55,6 +56,7 @@ table, th, td {
 						<td>${dto.goodsname }</td>
 						<td>${dto.buynum }</td>
 						<td id="threewidth">${dto.buydate }</td>
+						<td id="twowidth"><a href="${pageContext.request.contextPath }/review/reviewWrite?username=${dto.username }&goodsname=${dto.goodsname }"> 후기 작성하기 </a></td>
 					</tr>	
 					<% buyCnt++; %>	
 					</c:when></c:choose>	

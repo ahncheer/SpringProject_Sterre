@@ -18,19 +18,22 @@
   <h1 style="text-align: center;color: #777" class="text-shadow-pop-br">my page</h1>
 
 <hr style="width : 50%; margin: 30px;    margin-left: 25%;">
-<h3>구매내역 조회</h3>
+<c:import url="/member/memView?username=${user_id }" />
+<hr style="width : 50%; margin: 30px;    margin-left: 25%;">
+
+<h3 style="margin-top: 30px; margin-bottom: 20px; text-align: center;">구매내역 조회</h3>
 <div id="admindiv">
 <c:import url="/buy/buyList?username=${user_id }" />
 </div>
 
 <hr style="width : 50%; margin: 30px;    margin-left: 25%;">
-<h3>작성한 후기 조회</h3>
+<h3 style="margin-top: 30px; margin-bottom: 20px; text-align: center;">작성한 후기 조회</h3>
 <div id="admindiv">
 <c:import url="/review/reviewList?username=${user_id }" />
 </div>
 
 <hr style="width : 50%; margin: 30px;    margin-left: 25%;">
-<h3>작성한 게시물 조회</h3>
+<h3 style="margin-top: 30px; margin-bottom: 20px; text-align: center;">작성한 게시물 조회</h3>
 <div id="admindiv">
 <c:import url="/board/boardList?username=${user_id }" />
 </div>

@@ -14,10 +14,10 @@ public interface MWriteDAO {
 			String usertel, int useralarm, String userAdd);
 	public int minsert2(String username);
 	//public BWriteDTO readByuseruid(final int useruid);
-	public MWriteDTO mselectByUseruid(final int useruid);
+	public MWriteDTO mselectByUseruid(final String username);
 	public int mupdate(final MWriteDTO dto);
-	public int mupdate(int useruid, @Param("a") MWriteDTO dto);
-	public int mdeleteByUseruid(final int useruid);
+	public int mupdate(String username, @Param("a") MWriteDTO dto);
+	public int mdeleteByUseruid(final String username);
 	
 //	public int incViewCnt(int useruid);   // 조회수 증가
 	

@@ -56,7 +56,7 @@ table, th, td {
 					<li>
 						<ul>
 							<li>${dto.uid }</li>
-							<li class="left"><a href="${pageContext.request.contextPath }/board/view.do?uid=${dto.uid }">${dto.subject }</a></li>
+							<li class="left"><a href="${pageContext.request.contextPath }/board/view?uid=${dto.uid }">${dto.subject }</a></li>
 							<li style="word-break: break-all;">${dto.regDate }</li>
 							<li>${dto.name }</li>
 							<li>${dto.viewCnt }</li>
@@ -82,9 +82,10 @@ table, th, td {
 	</c:choose>
 	</div>
 	<br><br>
-<br><br><br>
+<br><br><br><br><br><br>
+<div>
   <%@ include file="../footer.jsp" %>
-
+</div>
 </body>
 </html>
 
@@ -100,7 +101,7 @@ table, th, td {
     #mainWrapper{
     	width: 800px;
 		margin: 0 auto; /*가운데 정렬*/
-		height: 450px;
+		height: 500px;
 	}
 
 	#mainWrapper > ul > li:first-child {

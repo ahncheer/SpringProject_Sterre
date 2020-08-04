@@ -53,22 +53,55 @@ background-color: grey;
 
 <c:choose>
 	<c:when test="${param.goods_sort == 0}">
-		<div id="goods_banner_img" style="width: 100%; height : 300px; background-color: #eee"></div>
+		<div id="goods_banner_img" > 
+			<div id="bannerLeft" ><h2 style="margin-top: 50px; color : #46bdc6">전체</h2></div>
+			<div id="bannerRight" style="background-image: url('https://image.idus.com/image/files/1c7720caeba5469a8d2b87236eddc75f_1440.jpg');"></div>
+			<div id="bannerRight" style="background-image: url('https://image.idus.com/image/files/1c7720caeba5469a8d2b87236eddc75f_1440.jpg');"></div>
+			<div id="bannerRight" style="background-image: url('https://image.idus.com/image/files/1c7720caeba5469a8d2b87236eddc75f_1440.jpg');"></div>
+		</div>
 	</c:when>
 	<c:when test="${param.goods_sort == 1}">
-		<div id="goods_banner_img" style="width: 100%; height : 300px; background-color: blue"></div>
+		<div id="goods_banner_img" > 
+			<div id="bannerLeft" ><h2 style="margin-top: 50px; color : #46bdc6">핸드폰케이스</h2></div>
+			<div id="bannerRight" style="background-image: url('https://image.idus.com/image/files/1c7720caeba5469a8d2b87236eddc75f_1440.jpg');"></div>
+			<div id="bannerRight" style="background-image: url('https://image.idus.com/image/files/1c7720caeba5469a8d2b87236eddc75f_1440.jpg');"></div>
+			<div id="bannerRight" style="background-image: url('https://image.idus.com/image/files/1c7720caeba5469a8d2b87236eddc75f_1440.jpg');"></div>
+		</div>
 	</c:when>
 	<c:when test="${param.goods_sort == 2}">
-		<div id="goods_banner_img" style="width: 100%; height : 300px; background-color: red"></div>
+		<div id="goods_banner_img" > 
+			<div id="bannerLeft" ><h2 style="margin-top: 50px; color : #46bdc6">버즈케이스</h2></div>
+			<div id="bannerRight" style="background-image: url('https://image.idus.com/image/files/1c7720caeba5469a8d2b87236eddc75f_1440.jpg');"></div>
+			<div id="bannerRight" style="background-image: url('https://image.idus.com/image/files/1c7720caeba5469a8d2b87236eddc75f_1440.jpg');"></div>
+			<div id="bannerRight" style="background-image: url('https://image.idus.com/image/files/1c7720caeba5469a8d2b87236eddc75f_1440.jpg');"></div>
+		</div>
 	</c:when>
 	<c:when test="${param.goods_sort == 3}">
-		<div id="goods_banner_img" style="width: 100%; height : 300px; background-color: green"></div>
+		<div id="goods_banner_img" > 
+			<div id="bannerLeft" ><h2 style="margin-top: 50px; color : #46bdc6">그립톡</h2></div>
+			<div id="bannerRight" style="background-image: url('https://image.idus.com/image/files/1c7720caeba5469a8d2b87236eddc75f_1440.jpg');"></div>
+			<div id="bannerRight" style="background-image: url('https://image.idus.com/image/files/1c7720caeba5469a8d2b87236eddc75f_1440.jpg');"></div>
+			<div id="bannerRight" style="background-image: url('https://image.idus.com/image/files/1c7720caeba5469a8d2b87236eddc75f_1440.jpg');"></div>
+		</div>
 	</c:when>
 	<c:when test="${param.goods_sort == 4}">
-		<div id="goods_banner_img" style="width: 100%; height : 300px; background-color: #eee"></div>
+		<div id="goods_banner_img" > 
+			<div id="bannerLeft" ><h2 style="margin-top: 50px; color : #46bdc6">키링</h2></div>
+			<div id="bannerRight" style="background-image: url('https://image.idus.com/image/files/1c7720caeba5469a8d2b87236eddc75f_1440.jpg');"></div>
+			<div id="bannerRight" style="background-image: url('https://image.idus.com/image/files/1c7720caeba5469a8d2b87236eddc75f_1440.jpg');"></div>
+			<div id="bannerRight" style="background-image: url('https://image.idus.com/image/files/1c7720caeba5469a8d2b87236eddc75f_1440.jpg');"></div>
+		</div>
+	</c:when>
+	<c:when test="${param.goods_sort == 5}">
+		<div id="goods_banner_img" > 
+			<div id="bannerLeft" ><h2 style="margin-top: 50px; color : #46bdc6">기타</h2></div>
+			<div id="bannerRight" style="background-image: url('https://image.idus.com/image/files/1c7720caeba5469a8d2b87236eddc75f_1440.jpg');"></div>
+			<div id="bannerRight" style="background-image: url('https://image.idus.com/image/files/1c7720caeba5469a8d2b87236eddc75f_1440.jpg');"></div>
+			<div id="bannerRight" style="background-image: url('https://image.idus.com/image/files/1c7720caeba5469a8d2b87236eddc75f_1440.jpg');"></div>
+		</div>
 	</c:when>
 </c:choose>
-
+<br><br>
 
 
 
@@ -87,36 +120,34 @@ background-color: grey;
 <div id="basicList" style="text-align:center;">
 	<c:choose>
 		<c:when test="${empty list || fn:length(list) == 0}">
+		<div> 상품이 없습니다.</div>
 		</c:when>
 		<c:otherwise>
 		
 			<c:choose>
 				<c:when test="${param.goods_sort == 0}"><!-- 상품전체선택 -->
 					<c:forEach var="dto" items="${list }">
-							<!-- ************상품출력박스************ -->
 							<div id="goods_box">
 								<a href="goodsClientView?goodsuid=${dto.goodsuid }">
-									<div id="goods_box_in"><img src="${dto.goodspic1 }" style="width: 200px;"></div>
-									<p>${dto.goodsname }</p>
-									<p>${dto.goodsprice }</p>
+									<div id="goods_box_in"><img src="${dto.goodspic1 }" style="width: 200px;"
+									 onerror="this.src = 'https://postfiles.pstatic.net/MjAyMDA4MDRfMTcx/MDAxNTk2NTUyNjU2NTMy.PNU4ccUc7DOcWSNeLU815Ug8_9mVEhwdaKtQ8xShwtkg.Dm2uUY1GTMD17WBqqCF4Sw5pG6X-baDYIXTm_BIgtwsg.PNG.ahncheer/logo.png?type=w966'"></div>
+									<p class="pinfo2">${dto.goodsname }</p>
+									<p class="pinfo2">${dto.goodsprice }</p>
 								</a>
 							</div>
-							<!-- ******************************** -->
 					</c:forEach>
 				</c:when>
 				<c:otherwise>
 					<c:forEach var="dto" items="${list }">
 							<c:if test="${dto.goodsSort == param.goods_sort}">
-								<!-- ************상품출력박스************ -->
 								<div id="goods_box">
 									<a href="goodsClientView?goodsuid=${dto.goodsuid }">
-										<div id="goods_box_in"><img src="${dto.goodspic1 }" style="width: 200px;"></div>
-										<p>이름 : ${dto.goodsname }</p>
-										<p>가격 : ${dto.goodsprice }</p>
-										<p>가격 : ${dto.goodsSort }</p>
+										<div id="goods_box_in"><img src="${dto.goodspic1 }" style="width: 200px;"
+										 onerror="this.src = 'https://postfiles.pstatic.net/MjAyMDA4MDRfMTcx/MDAxNTk2NTUyNjU2NTMy.PNU4ccUc7DOcWSNeLU815Ug8_9mVEhwdaKtQ8xShwtkg.Dm2uUY1GTMD17WBqqCF4Sw5pG6X-baDYIXTm_BIgtwsg.PNG.ahncheer/logo.png?type=w966'"></div>
+										<p class="pinfo2">${dto.goodsname }</p>
+										<p class="pinfo2"> ${dto.goodsprice }</p>
 									</a>
 								</div>
-								<!-- ******************************** -->
 							</c:if>
 					</c:forEach>
 				</c:otherwise>
@@ -127,7 +158,9 @@ background-color: grey;
 </div>
 
 <div id="demo" style="text-align:center;"></div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br>
+	<%@ include file="../footer.jsp" %>
+
 </body>
 </html>
 
@@ -177,8 +210,29 @@ function getParameterByName(name) {
 
 </script>
 
+<style>
+.pinfo2{
+ margin-top: 5px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    color: #666;
+    }
 
+#goods_banner_img{
+width: 100%; height : 300px; background-color: aliceblue;
+border: 2px dotted #46bdc6; border-radius: 20px;
+}
 
+#bannerLeft{
+width: 25%; height : 80%;  margin-left: 5%; margin-top: 30px; background-color: aliceblue; border-radius: 100px; float: left; text-align: center;
+
+}
+
+#bannerRight{
+ width: 18%; height : 80%;  margin-right: 2%; margin-top: 30px; background-color: #46bdc6; border-radius: 120px; float: right;
+ background-position: center; background-size: cover;
+}
+</style>
 
 
 

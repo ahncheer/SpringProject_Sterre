@@ -11,16 +11,18 @@
 <title>LogOut</title>
 </head>
 <body>
-  <%@ include file="header.jsp" %>
 
 <div class="main" style="margin-top: 70px; height: 270px">
 <p class="sign" align="center">로그아웃하시겠습니까?</p>
 	<form class="form1" action="${pageContext.request.contextPath}/customLogout" method='post'>
-		<button class="submit" >로그아웃</button>
+		<button class="submit" ><b>로그아웃</b></button>
 		
 		<!-- <p class="forgot" align="center"><a href="#">Forgot Password?</p> -->
 		<input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />
 	</form>
+	<br>
+		<button class="submit" onClick="history.back()" style="color: #fff"><b>뒤로가기</b></button>
+	
 </div>
 
 

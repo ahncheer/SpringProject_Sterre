@@ -27,13 +27,10 @@ table, th, td {
 	<%@ include file="../header.jsp" %>
 	
 
- <div class="content">
-	<div id="list">
+	  <h1 style="text-align: center;color: #777" class="text-shadow-pop-br"><b>후기 전체 목록</b></h1>
+	<hr>
+ <div class="content" style="display: flow-root;padding-left: 100px;padding-right: 100px;">
 	
-			  <h1 style="text-align: center;color: #777" class="text-shadow-pop-br"><b>후기 전체 목록</b></h1>
-			<hr>
-			
-			
 			
 		
 			<c:choose>
@@ -43,7 +40,7 @@ table, th, td {
 				
 				<c:forEach var="dto" items="${list }">
 
-<article class="card card--1" style="width: 23%; float: left;  margin-left: 1%;margin-right: 1%;">
+<div class="card card--1" style="width: 250px ;  margin-left: 2%;margin-right: 2%; background-color: #ddd; float: left; height: fit-content;margin-top: 30px;">
   <div class="card__info-hover">
     <svg class="card__like"  viewBox="0 0 24 24">
     <path fill="#000000" d="M12.1,18.55L12,18.65L11.89,18.55C7.14,14.24 4,11.39 4,8.5C4,6.5 5.5,5 7.5,5C9.04,5 10.54,6 11.07,7.36H12.93C13.46,6 14.96,5 16.5,5C18.5,5 20,6.5 20,8.5C20,11.39 16.86,14.24 12.1,18.55M16.5,3C14.76,3 13.09,3.81 12,5.08C10.91,3.81 9.24,3 7.5,3C4.42,3 2,5.41 2,8.5C2,12.27 5.4,15.36 10.55,20.03L12,21.35L13.45,20.03C18.6,15.36 22,12.27 22,8.5C22,5.41 19.58,3 16.5,3Z" />
@@ -56,55 +53,32 @@ table, th, td {
    </a>
   <div class="card__info">
     <span class="card__category"> ${dto.goodsname }</span>
-    <h3 class="card__title" style="word-break : break-all">${dto.reviewcontent }</h3>
+    <h3 class="card__title" style="word-break : break-all;font-size: 17px;">${dto.reviewcontent }</h3>
     <span class="card__by">by <a href="#" class="card__author" title="author">${dto.username }</a></span>
   </div>
-</article>
+</div>
 				
 				</c:forEach>
 				</c:otherwise>
 			</c:choose>
 	
 	</div>
-</div>
 
 
   
-  
-  
-  </section>  
-    
-    
+  <br><br><br><br><br><br>
+    <div style="width:100%"> 
+       <%@ include file="../footer.jsp" %>
+    </div>
 </body>
 </html>
 
-<style>
-#list{
-padding-left: 10%; 
-padding-right: 10%;
-}
-
-
-
-#reviewBlock{
-padding: 5px;
-margin-left : 20px;
-margin-right : 20px;
-margin-top: 8px;
-width : 20%;
-border: 2px solid red;
-border-radius: 10px;
-float: left;
-text-align: center;
-}
-
-
-
-
-
-</style>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+
 
 .cards {
     width: 100%;
@@ -120,29 +94,13 @@ text-align: center;
     width: 18px;
 }
 
-.card__clock {
-    width: 15px;
-  vertical-align: middle;
-    fill: #AD7D52;
-}
-.card__time {
-    font-size: 12px;
-    color: #AD7D52;
-    vertical-align: middle;
-    margin-left: 5px;
-}
-
-.card__clock-info {
-    float: right;
-}
-
 .card__img {
   visibility: hidden;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 235px;
+    height: 300px;
   border-top-left-radius: 12px;
 border-top-right-radius: 12px;
   
@@ -163,7 +121,7 @@ border-top-right-radius: 12px;
     background-repeat: no-repeat;
     width: 100%;
   position: absolute;
-    height: 235px;
+    height: 300px;
   border-top-left-radius: 12px;
 border-top-right-radius: 12px;
 top: 0;
@@ -173,7 +131,6 @@ top: 0;
   margin-right: 25px;
   transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
   background-color: #fff;
-    width: 33.3%;
   position: relative;
   border-radius: 12px;
   overflow: hidden;
@@ -221,7 +178,7 @@ border-bottom-right-radius: 12px;
 
 .card:hover .card__img--hover {
     height: 100%;
-    opacity: 0.3;
+    opacity: 0.8;
 }
 
 .card:hover .card__info {

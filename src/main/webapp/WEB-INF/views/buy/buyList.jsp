@@ -56,7 +56,26 @@ table, th, td {
 						<td>${dto.goodsname }</td>
 						<td>${dto.buynum }</td>
 						<td id="threewidth">${dto.buydate }</td>
-						<td id="twowidth"><a href="${pageContext.request.contextPath }/review/reviewWrite?username=${dto.username }&goodsname=${dto.goodsname }"> 후기 작성하기 </a></td>
+					<td id="threewidth"> <a href="#" class="modal-trigger" data-modal="modal-name">후기작성</a> </td>
+
+					<div style="width : 0px;">
+						    <!-- Modal -->
+						<div class="modal" id="modal-name" style="z-index: 10;">
+						  <div class="modal-sandbox"></div>
+						  <div class="modal-box">
+						    <div class="modal-header">
+						      <div class="close-modal">&#10006;</div> 
+						      <h1>후기 작성</h1>
+						    </div>
+						    <div class="modal-body">
+						    	<c:import url="/review/reviewWrite?username=${dto.username }&goodsname=${dto.goodsname }"></c:import>
+						      <br />
+						      <button class="close-modal" style="float: right;margin-left: 5px;margin-right: 5px;">Close!</button>
+						    </div>
+						  </div>
+						</div>
+					</div>
+					
 					</tr>	
 					<% buyCnt++; %>	
 					</c:when></c:choose>	
@@ -68,7 +87,6 @@ table, th, td {
 	</div>
 </div>
 
-    
 <style>
 
 #threewidth {
@@ -117,9 +135,127 @@ word-break: break-all;
 
 
 
+<!-- Aditional Styles -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
 
 
 
+<style>
+.modal,
+.modal-box {
+  z-index: 8;
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgb(0,0,0);
+  background: rgba(0,0,0,.8);
+  overflow: auto;
+}
+
+.modal-box {
+  position: relative;
+  width: 80%;
+  max-width: 920px;
+  margin: 100px auto;
+  animation-name: modalbox;
+  animation-duration: .4s;
+  animation-timing-function: cubic-bezier(0,0,.3,1.6);
+}
+
+.modal-header {
+  padding: 20px 40px;
+  background: #546E7A;
+  color: #ffffff;
+}
+
+.modal-body {
+  background: #ECEFF1;
+  padding: 60px 40px;
+}
+
+/* Close Button */
+.close-modal {
+  text-align: right;
+  cursor: pointer;
+}
+
+/* Animation */
+@-webkit-keyframes modalbox {
+  0% {
+    top: -250px; 
+    opacity: 0;
+  }
+  100% {
+    top: 0; 
+    opacity: 1;
+  }
+}
+
+@keyframes modalbox {
+  0% {
+    top: -250px; 
+    opacity: 0;
+  }
+  100% {
+    top: 0; 
+    opacity: 1;
+  }
+}
+
+
+.modal-trigger, button {
+  top: 50%;
+  left: 50%;
+  padding: 10px 20px;
+  background: transparent;
+  color: #46bdc6;
+  text-decoration: none;
+}
+
+.modal-trigger {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: ease .2s;
+}
+
+button {
+  border: 1px solid #333333;
+  outline: none;
+  color: #333333;
+}
+
+
+
+</style>
+
+
+<script>
+
+$(".modal-trigger").click(function(e){
+  e.preventDefault();
+  dataModal = $(this).attr("data-modal");
+  $("#" + dataModal).css({"display":"block"});
+  // $("body").css({"overflow-y": "hidden"}); //Prevent double scrollbar.
+});
+
+$(".close-modal, .modal-sandbox").click(function(){
+  $(".modal").css({"display":"none"});
+  // $("body").css({"overflow-y": "auto"}); //Prevent double scrollbar.
+});
+
+
+
+</script>
 
 
 

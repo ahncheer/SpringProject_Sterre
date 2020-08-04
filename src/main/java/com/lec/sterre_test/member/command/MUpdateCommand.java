@@ -22,7 +22,7 @@ public class MUpdateCommand implements MCommand {
 		MWriteDAO dao = C.sqlSession.getMapper(MWriteDAO.class);
 		
 		//model.addAttribute("result", dao.update(dto));
-		model.addAttribute("result", dao.mupdate(dto.getUseruid(), dto));
+		model.addAttribute("result", dao.mupdate(dto.getUsername(), dto));
 	}
 
 }

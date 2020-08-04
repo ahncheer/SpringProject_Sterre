@@ -13,14 +13,14 @@ public class MSelectCommand implements MCommand {
 	@Override
 	public void execute(Model model) {
 		Map<String, Object> map = model.asMap();
-		int useruid = (Integer)map.get("useruid");
+		String username = (String)map.get("username");
 
 //		BWriteDAO dao = new BWriteDAO();
 //		BWriteDTO dto = dao.selectByUid(uid);
 //		model.addAttribute("list", Arrays.asList(dto));
 		
 		MWriteDAO dao = C.sqlSession.getMapper(MWriteDAO.class);
-		model.addAttribute("list", Arrays.asList(dao.mselectByUseruid(useruid)));
+		model.addAttribute("list", Arrays.asList(dao.mselectByUseruid(username)));
 		
 
 	}

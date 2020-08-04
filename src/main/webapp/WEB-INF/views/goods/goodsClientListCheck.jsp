@@ -59,10 +59,10 @@ ${param.goods_select }  확인용ㅇ
 					<c:forEach var="dto" items="${list }">
 							<div id="goods_box">
 								<a href="goodsClientView?goodsuid=${dto.goodsuid }">
-									<div id="goods_box_in"><img src="${dto.goodspic1 }" style="width: 200px;"></div>
-									<p>이름 : ${dto.goodsname }</p>
-									<p>가격 : ${dto.goodsprice }</p>
-									<p>종류 : ${dto.goodsSort }</p>
+									<div id="goods_box_in"><img src="${dto.goodspic1 }" style="width: 200px;"
+									 onerror="this.src = 'https://postfiles.pstatic.net/MjAyMDA4MDRfMTcx/MDAxNTk2NTUyNjU2NTMy.PNU4ccUc7DOcWSNeLU815Ug8_9mVEhwdaKtQ8xShwtkg.Dm2uUY1GTMD17WBqqCF4Sw5pG6X-baDYIXTm_BIgtwsg.PNG.ahncheer/logo.png?type=w966'"></div>
+									<p class="pinfo2">${dto.goodsname }</p>
+									<p class="pinfo2">${dto.goodsprice }</p>
 								</a>
 							</div>
 					</c:forEach>
@@ -72,10 +72,10 @@ ${param.goods_select }  확인용ㅇ
 						<c:if test="${dto.goodsCustom == param.goods_select}">
 							<div id="goods_box">
 								<a href="goodsClientView?goodsuid=${dto.goodsuid }">
-									<div id="goods_box_in"><img src="${dto.goodspic1 }" style="width: 200px;"></div>
-									<p>이름 : ${dto.goodsname }</p>
-									<p>가격 : ${dto.goodsprice }</p>
-									<p>종류 : ${dto.goodsSort }</p>
+									<div id="goods_box_in"><img src="${dto.goodspic1 }" style="width: 200px;"
+									 onerror="this.src = 'https://postfiles.pstatic.net/MjAyMDA4MDRfMTcx/MDAxNTk2NTUyNjU2NTMy.PNU4ccUc7DOcWSNeLU815Ug8_9mVEhwdaKtQ8xShwtkg.Dm2uUY1GTMD17WBqqCF4Sw5pG6X-baDYIXTm_BIgtwsg.PNG.ahncheer/logo.png?type=w966'"></div>
+									<p class="pinfo2">${dto.goodsname }</p>
+									<p class="pinfo2">${dto.goodsprice }</p>
 								</a>
 							</div>
 						</c:if>
@@ -86,10 +86,10 @@ ${param.goods_select }  확인용ㅇ
 						<c:if test="${dto.goodsSort == param.goods_sort}">
 							<div id="goods_box">
 								<a href="goodsClientView?goodsuid=${dto.goodsuid }">
-									<div id="goods_box_in"><img src="${dto.goodspic1 }" style="width: 200px;"></div>
-									<p>이름 : ${dto.goodsname }</p>
-									<p>가격 : ${dto.goodsprice }</p>
-									<p>종류 : ${dto.goodsSort }</p>
+									<div id="goods_box_in"><img src="${dto.goodspic1 }" style="width: 200px;"
+									 onerror="this.src = 'https://postfiles.pstatic.net/MjAyMDA4MDRfMTcx/MDAxNTk2NTUyNjU2NTMy.PNU4ccUc7DOcWSNeLU815Ug8_9mVEhwdaKtQ8xShwtkg.Dm2uUY1GTMD17WBqqCF4Sw5pG6X-baDYIXTm_BIgtwsg.PNG.ahncheer/logo.png?type=w966'"></div>
+									<p class="pinfo2">${dto.goodsname }</p>
+									<p class="pinfo2">${dto.goodsprice }</p>
 								</a>
 							</div>
 						</c:if>
@@ -100,10 +100,10 @@ ${param.goods_select }  확인용ㅇ
 						<c:if test="${dto.goodsSort == param.goods_sort && dto.goodsCustom == param.goods_select}">
 							<div id="goods_box">
 								<a href="goodsClientView?goodsuid=${dto.goodsuid }">
-									<div id="goods_box_in"><img src="${dto.goodspic1 }" style="width: 200px;"></div>
-									<p>이름 : ${dto.goodsname }</p>
-									<p>가격 : ${dto.goodsprice }</p>
-									<p>종류 : ${dto.goodsSort }</p>
+									<div id="goods_box_in"><img src="${dto.goodspic1 }" style="width: 200px;"
+									 onerror="this.src = 'https://postfiles.pstatic.net/MjAyMDA4MDRfMTcx/MDAxNTk2NTUyNjU2NTMy.PNU4ccUc7DOcWSNeLU815Ug8_9mVEhwdaKtQ8xShwtkg.Dm2uUY1GTMD17WBqqCF4Sw5pG6X-baDYIXTm_BIgtwsg.PNG.ahncheer/logo.png?type=w966'"></div>
+									<p class="pinfo2">${dto.goodsname }</p>
+									<p class="pinfo2">${dto.goodsprice }</p>
 								</a>
 							</div>
 						</c:if>
@@ -121,6 +121,14 @@ ${param.goods_select }  확인용ㅇ
 </html>
 
 
+<style>
+.pinfo2{
+ margin-top: 5px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+    color: #666;
+    }
+</style>
 
 
 

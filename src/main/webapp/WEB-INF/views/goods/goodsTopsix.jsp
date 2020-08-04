@@ -20,7 +20,7 @@
 </head>
 <body>
 
-<div id="basicList" style="text-align:center;width: 100%; text-decoration:none;    height: 700px;">
+<div id="basicList" style="text-align:center;width: 100%; text-decoration:none; height: 700px;">
 	<c:choose>
 		<c:when test="${empty list || fn:length(list) == 0}">
 		</c:when>
@@ -30,80 +30,88 @@
 				<div class="BestItemList">
 					<ul>
 						<li>
-							<a href="goodsClientView?goodsuid=${list[0].goodsuid }">
+							<a href="${pageContext.request.contextPath }/goods/goodsClientView?goodsuid=${list[0].goodsuid }">
 								<span class="ImageNumber num1">01</span>
 								<span class="ImageBackGround"></span>
-								<img class="ItemImage" src="${list[0].goodspic1 }">
+								<img class="ItemImage" src="${list[0].goodspic1 }" 
+								onerror="this.src = 'https://postfiles.pstatic.net/MjAyMDA4MDRfMTcx/MDAxNTk2NTUyNjU2NTMy.PNU4ccUc7DOcWSNeLU815Ug8_9mVEhwdaKtQ8xShwtkg.Dm2uUY1GTMD17WBqqCF4Sw5pG6X-baDYIXTm_BIgtwsg.PNG.ahncheer/logo.png?type=w966'">
 								<span class="ItemName">${list[0].goodsname }</span>
 								<span class="ItemPrice">${list[0].goodsprice }</span>
 							</a>
 						</li>
 						
 						<li>
-							<a href="goodsClientView?goodsuid=${list[1].goodsuid }">
+							<a href="${pageContext.request.contextPath }/goods/goodsClientView?goodsuid=${list[1].goodsuid }">
 								<span class="ImageNumber num2">02</span>
 								<span class="ImageBackGround"></span>
-								<img class="ItemImage" src="${list[1].goodspic1 }">
+								<img class="ItemImage" src="${list[1].goodspic1 }" 
+								onerror="this.src = 'https://postfiles.pstatic.net/MjAyMDA4MDRfMTcx/MDAxNTk2NTUyNjU2NTMy.PNU4ccUc7DOcWSNeLU815Ug8_9mVEhwdaKtQ8xShwtkg.Dm2uUY1GTMD17WBqqCF4Sw5pG6X-baDYIXTm_BIgtwsg.PNG.ahncheer/logo.png?type=w966'" >
 								<span class="ItemName">${list[1].goodsname }</span>
 								<span class="ItemPrice">${list[1].goodsprice }</span>
 							</a>
 						</li>
 						
 						<li>
-							<a href="goodsClientView?goodsuid=${list[2].goodsuid }">
+							<a href="${pageContext.request.contextPath }/goods/goodsClientView?goodsuid=${list[2].goodsuid }">
 								<span class="ImageNumber num2">03</span>
 								<span class="ImageBackGround"></span>
-								<img class="ItemImage" src="${list[2].goodspic1 }">
+								<img class="ItemImage" src="${list[2].goodspic1 }" 
+								 onerror="this.src = 'https://postfiles.pstatic.net/MjAyMDA4MDRfMTcx/MDAxNTk2NTUyNjU2NTMy.PNU4ccUc7DOcWSNeLU815Ug8_9mVEhwdaKtQ8xShwtkg.Dm2uUY1GTMD17WBqqCF4Sw5pG6X-baDYIXTm_BIgtwsg.PNG.ahncheer/logo.png?type=w966'">
 								<span class="ItemName">${list[2].goodsname }</span>
 								<span class="ItemPrice">${list[2].goodsprice }</span>
 							</a>
 						</li>
 						
 						<li>
-							<a href="goodsClientView?goodsuid=${list[3].goodsuid }">
+							<a href="${pageContext.request.contextPath }/goods/goodsClientView?goodsuid=${list[3].goodsuid }">
 								<span class="ImageNumber num3">04</span>
 								<span class="ImageBackGround"></span>
-								<img class="ItemImage" src="${list[3].goodspic1 }">
+								<img class="ItemImage" src="${list[3].goodspic1 }" 
+								onerror="this.src = 'https://postfiles.pstatic.net/MjAyMDA4MDRfMTcx/MDAxNTk2NTUyNjU2NTMy.PNU4ccUc7DOcWSNeLU815Ug8_9mVEhwdaKtQ8xShwtkg.Dm2uUY1GTMD17WBqqCF4Sw5pG6X-baDYIXTm_BIgtwsg.PNG.ahncheer/logo.png?type=w966'" >
 								<span class="ItemName">${list[3].goodsname }</span>
 								<span class="ItemPrice">${list[3].goodsprice }</span>
 							</a>
 						</li>
 						
 						<li>
-							<a href="goodsClientView?goodsuid=${list[4].goodsuid }">
+							<a href="${pageContext.request.contextPath }/goods/goodsClientView?goodsuid=${list[4].goodsuid }">
 								<span class="ImageNumber num3">05</span>
 								<span class="ImageBackGround"></span>
-								<img class="ItemImage" src="${list[4].goodspic1 }">
+								<img class="ItemImage" src="${list[4].goodspic1 }" 
+								onerror="this.src = 'https://postfiles.pstatic.net/MjAyMDA4MDRfMTcx/MDAxNTk2NTUyNjU2NTMy.PNU4ccUc7DOcWSNeLU815Ug8_9mVEhwdaKtQ8xShwtkg.Dm2uUY1GTMD17WBqqCF4Sw5pG6X-baDYIXTm_BIgtwsg.PNG.ahncheer/logo.png?type=w966'" >
 								<span class="ItemName">${list[4].goodsname }</span>
 								<span class="ItemPrice">${list[4].goodsprice }</span>
 							</a>
 						</li>
 						
 						<li>
-							<a href="goodsClientView?goodsuid=${list[5].goodsuid }">
+							<a href="${pageContext.request.contextPath }/goods/goodsClientView?goodsuid=${list[5].goodsuid }">
 								<span class="ImageNumber num3">06</span>
 								<span class="ImageBackGround"></span>
-								<img class="ItemImage" src="${list[5].goodspic1 }">
+								<img class="ItemImage" src="${list[5].goodspic1 }" 
+								 onerror="this.src = 'https://postfiles.pstatic.net/MjAyMDA4MDRfMTcx/MDAxNTk2NTUyNjU2NTMy.PNU4ccUc7DOcWSNeLU815Ug8_9mVEhwdaKtQ8xShwtkg.Dm2uUY1GTMD17WBqqCF4Sw5pG6X-baDYIXTm_BIgtwsg.PNG.ahncheer/logo.png?type=w966'">
 								<span class="ItemName">${list[5].goodsname }</span>
 								<span class="ItemPrice">${list[5].goodsprice }</span>
 							</a>
 						</li>
 						
 						<li>
-							<a href="goodsClientView?goodsuid=${list[6].goodsuid }">
+							<a href="${pageContext.request.contextPath }/goods/goodsClientView?goodsuid=${list[6].goodsuid }">
 								<span class="ImageNumber num3">07</span>
 								<span class="ImageBackGround"></span>
-								<img class="ItemImage" src="${list[6].goodspic1 }">
+								<img class="ItemImage" src="${list[6].goodspic1 }" 
+								 onerror="this.src = 'https://postfiles.pstatic.net/MjAyMDA4MDRfMTcx/MDAxNTk2NTUyNjU2NTMy.PNU4ccUc7DOcWSNeLU815Ug8_9mVEhwdaKtQ8xShwtkg.Dm2uUY1GTMD17WBqqCF4Sw5pG6X-baDYIXTm_BIgtwsg.PNG.ahncheer/logo.png?type=w966'">
 								<span class="ItemName">${list[6].goodsname }</span>
 								<span class="ItemPrice">${list[6].goodsprice }</span>
 							</a>
 						</li>
 						
 						<li>
-							<a href="goodsClientView?goodsuid=${list[7].goodsuid }">
+							<a href="${pageContext.request.contextPath }/goods/goodsClientView?goodsuid=${list[7].goodsuid }">
 								<span class="ImageNumber num3">08</span>
 								<span class="ImageBackGround"></span>
-								<img class="ItemImage" src="${list[7].goodspic1 }">
+								<img class="ItemImage" src="${list[7].goodspic1 }" 
+								 onerror="this.src = 'https://postfiles.pstatic.net/MjAyMDA4MDRfMTcx/MDAxNTk2NTUyNjU2NTMy.PNU4ccUc7DOcWSNeLU815Ug8_9mVEhwdaKtQ8xShwtkg.Dm2uUY1GTMD17WBqqCF4Sw5pG6X-baDYIXTm_BIgtwsg.PNG.ahncheer/logo.png?type=w966'">
 								<span class="ItemName">${list[7].goodsname }</span>
 								<span class="ItemPrice">${list[7].goodsprice }</span>
 							</a>

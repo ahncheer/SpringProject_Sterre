@@ -63,7 +63,7 @@
 			</tfoot> 
 		</table>
 		
-</body>
+<div><c:import url="../footer." /></div></body>
 </html>
 
 

@@ -8,6 +8,7 @@
 
 	<!-- spring-jdbc 빈 객체 생성 -->
 	<!-- DataSource 객체 : Oracle -->
+	
 	<beans:bean name="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<beans:property name="driverClassName"
@@ -17,7 +18,18 @@
 		<beans:property name="username" value="sterre0316" />
 		<beans:property name="password" value="star0316" />
 	</beans:bean>
-
+	
+	<!--
+<beans:bean name="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<beans:property name="driverClassName"  value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy" />
+		<beans:property name="url"
+			value="jdbc:log4jdbc:mysql://localhost:3306/amu3014" />
+		<beans:property name="username" value="amu3014" />
+		<beans:property name="password" value="vongola1947" />
+	</beans:bean>
+	
+	-->
 		<!-- MultipartResolver 설정 --> 
 	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"> 
 	<beans:property name="maxUploadSize" value="100000000" /> 

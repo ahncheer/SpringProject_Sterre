@@ -12,8 +12,8 @@
 	</c:when>
 	<c:otherwise>
 	<script>
-		alert('수정 성공');
-		location.href = "memView.do?useruid=${param.useruid}";
+		//alert('수정 성공');
+		location.href = "${pageContext.request.contextPath }/member/myPage";
 	</script>
 	</c:otherwise>
 </c:choose>

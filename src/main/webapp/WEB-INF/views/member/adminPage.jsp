@@ -44,8 +44,7 @@
 <c:import url="/board/BoardAllList" />
 </div>
 
-  <%@ include file="../footer.jsp" %>
-
+<div><c:import url="../footer." /></div>
 </body>
 </html>
 

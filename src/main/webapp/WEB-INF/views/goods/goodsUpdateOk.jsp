@@ -12,7 +12,7 @@
 	</c:when>
 	<c:otherwise>
 	<script>
-		alert('수정 성공');
+		//alert('수정 성공');
 		location.href = "goodsView.do?goodsuid=${param.goodsuid }";
 	</script>
 	</c:otherwise>

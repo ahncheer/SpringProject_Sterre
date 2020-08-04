@@ -155,5 +155,7 @@ geocoder.addressSearch('서울 강남구 테헤란로 146', function(result, sta
     } 
 });    
 </script>
+  <%@ include file="../footer.jsp" %>
+
 </body>
 </html>

@@ -21,24 +21,24 @@
       <div id="slider-wrap">
           <ul id="slider">
              <li>
-                <div><h3>Slide #5</h3><span>Sub-title #5</span></div>
-				<img src="https://fakeimg.pl/350x200/0064CD/000?text=11111">
+                <div><h3>Slide #1</h3><span>할인안내</span></div>
+				<img src="https://image.idus.com/image/files/1d8eaf041f14413b9059c9dffeb99e96.jpg">
             </li>
             <li>
-                <div><h3>Slide #5</h3><span>Sub-title #5</span></div>
-				<img src="https://fakeimg.pl/350x200/0064CD/000?text=22222">
+                <div><h3>Slide #2</h3><span>배송안내</span></div>
+				<img src="https://image.idus.com/image/files/49ce2afdb9b044c48a7b52999867b231.jpg">
             </li>
             <li>
-                <div><h3>Slide #5</h3><span>Sub-title #5</span></div>
-				<img src="https://fakeimg.pl/350x200/0064CD/000?text=33333">
+                <div><h3>Slide #3</h3><span>핸드메이드</span></div>
+				<img src="https://image.idus.com/image/files/6783b106b97d4552aca16bdf9992a273.jpg">
             </li>
             <li>
-                <div><h3>Slide #5</h3><span>Sub-title #5</span></div>
-				<img src="https://fakeimg.pl/350x200/0064CD/000?text=44444">
+                <div><h3>Slide #4</h3><span>기타물건</span></div>
+				<img src="https://image.idus.com/image/files/be73c7f623194804b59d58efbfbe247c.jpg">
             </li>
              <li>
-                <div><h3>Slide #5</h3><span>Sub-title #5</span></div>
-				<img src="https://fakeimg.pl/350x200/0064CD/000?text=55555">
+                <div><h3>Slide #5</h3><span>기타오프라인</span></div>
+				<img src="https://image.idus.com/image/files/e5e6351567bf46c2b84d5a6eece3baba.jpg">
             </li>
           </ul>
           
@@ -56,7 +56,7 @@
    <hr class="featurette-divider" style="margin: 2rem 0;">
 
 <!--  top six -->
-<div>
+<div style="margin: 0px 13%;">
 	<c:import url="/goods/goodsTopsix" />
 </div>
    <hr class="featurette-divider" style="margin: 2rem 0;">
@@ -66,7 +66,7 @@
 <div>
 	<c:import url="/footer" />
 </div>
-
+ㄴ
 </body>
 </html>
 
@@ -77,7 +77,7 @@ a{text-decoration:none; color:#666;}
 a:hover{color:#1bc1a3;}
 
 #wrapper{
-    width:1200px;
+    width:1500px;
     margin:20px auto;
     height:500px;
     position:relative;
@@ -86,7 +86,7 @@ a:hover{color:#1bc1a3;}
 }
 
 #slider-wrap{
-    width:1200px;
+    width:1500px;
     height:500px;
     position:relative;
     overflow:hidden;
@@ -104,7 +104,7 @@ a:hover{color:#1bc1a3;}
 #slider-wrap ul#slider li{
     float:left;
     position:relative;
-    width:1200px;
+    width:1500px;
     height:500px;   
 }
 
@@ -177,7 +177,7 @@ a:hover{color:#1bc1a3;}
 /*bar*/
 #pagination-wrap{
     min-width:20px;
-    margin-top:350px;
+    margin-top:450px;
     margin-left: auto; 
     margin-right: auto;
     height:15px;

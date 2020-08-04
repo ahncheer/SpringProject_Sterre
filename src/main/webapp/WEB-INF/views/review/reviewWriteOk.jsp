@@ -11,7 +11,7 @@
 	</c:when>
 	<c:otherwise>
 		<script>
-			alert("후기등록 성공, 후기 전체 페이지로 이동합니다");
+			//alert("후기등록 성공, 후기 전체 페이지로 이동합니다");
 			location.href = "${pageContext.request.contextPath }/review/reviewAllList";
 		</script>
 	</c:otherwise>

@@ -18,6 +18,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
 <title>${list[0].goodsuid }</title> <!-- title에 글제목 넣기 -->
 </head>
 
@@ -50,10 +51,10 @@
 	<input type="radio" name="pos" id="pos1" checked>
 	<input type="radio" name="pos" id="pos2">
 	<ul>
-		<li ><img src="${list[0].goodspic1 }" style="width: 100%; height: 500px;"/></li>
-		<li><img src="${list[0].goodspic2 }" style="width: 100%; height: 500px;"/></li>
+		<li ><img src="${list[0].goodspic1 }" style="width: 100%; height: 500px;" onerror="this.src = 'https://postfiles.pstatic.net/MjAyMDA4MDRfMTcx/MDAxNTk2NTUyNjU2NTMy.PNU4ccUc7DOcWSNeLU815Ug8_9mVEhwdaKtQ8xShwtkg.Dm2uUY1GTMD17WBqqCF4Sw5pG6X-baDYIXTm_BIgtwsg.PNG.ahncheer/logo.png?type=w966'"/></li>
+		<li><img src="${list[0].goodspic2 }" style="width: 100%; height: 500px;" onerror="this.src = 'https://postfiles.pstatic.net/MjAyMDA4MDRfMTcx/MDAxNTk2NTUyNjU2NTMy.PNU4ccUc7DOcWSNeLU815Ug8_9mVEhwdaKtQ8xShwtkg.Dm2uUY1GTMD17WBqqCF4Sw5pG6X-baDYIXTm_BIgtwsg.PNG.ahncheer/logo.png?type=w966'"/></li>
 	</ul>
-	<p class="pos" style="left: -15%;bottom:120px;">
+	<p class="pos" style="left: -15%;bottom:300px;">
 		<label for="pos1"></label>
 		<label for="pos2"></label>
 	</p>
@@ -69,7 +70,7 @@
 		<br>
 		<span class="pinfo">고유번호 : ${list[0].goodsuid }</span><br>
 		<span class="pinfo">가격 : ${list[0].goodsprice }</span><br>
-		<span class="pinfo">남은개수 : ${list[0].goodsLeft }</span><br>
+		<span class="pinfo">남은개수 : ${list[0].goodsTotal - list[0].goodsLeft }</span><br>
 		<br>
 		<hr style="width: 60%; float: left; color: grey;">
 		<br><br>
@@ -83,11 +84,11 @@
 		 
 		 <c:choose> 
 			<c:when test="${user_id eq 'admin'}">
-				<button class="buybutton buybutton1"> 관리자 구매불가</button>
+				<button class="buttonblack" style="margin-left: 20%"> 관리자 구매불가</button>
 			</c:when>
 			
 			<c:when test="${not empty user_id }">
-				<button class="buybutton buybutton1"
+				<button class="buttonblack" 
 			onclick="location.href = '${pageContext.request.contextPath }/buy/buyWrite?goodsname=${list[0].goodsname}&goodsprice=${list[0].goodsprice}' " >구매하기</button>
 			</c:when>		 
 		 
@@ -98,13 +99,17 @@
 <br>
 
 <hr>
-<div style="width: 60%; margin-left: 20%; background-color: #dedede; height: 200px; padding: 30px">
+<div style="width: 60%; margin-left: 20%; background-color: #dedede; height: 200px; padding: 30px;">
 설명 : ${list[0].goodsContent }<br>
 </div>
 
 <hr>
 <br>
-<button onclick="location.href = '${pageContext.request.contextPath }/goods/goodsClientList?goods_sort=${list[0].goodsSort}' ">목록보기</button>
+<button onclick="location.href = '${pageContext.request.contextPath }/goods/goodsClientList?goods_sort=${list[0].goodsSort}'" 
+class="buttonblack" style="margin-left: 40%;width:10%">목록보기</button>
+
+<br><br><br><br>
+	<%@ include file="../footer.jsp" %>
 
 </body>
 </html>
@@ -144,7 +149,18 @@ var x = $("#sel option:selected").val();
 </script>
 
 
+<style>
 
+
+.buttonblack{
+border: 1px solid #333333; 
+outline: none; 
+color: #333333;
+padding: 10px 20px;
+ background: transparent;
+}
+
+</style>
 
 
 

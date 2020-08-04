@@ -196,10 +196,10 @@ function chkWrite(){
 		success : function(data, status){
 			if(status == "success"){
 				if(data.status == "OK"){
-					alert("INSERT 성공 " + data.count + "개:" + data.status);
+					//alert("INSERT 성공 " + data.count + "개:" + data.status);
 					loadPage(1);  // 첫페이지 리로딩
 				} else {
-					alert("INSERT 실패 " + data.status + " : " + data.message);
+					//alert("INSERT 실패 " + data.status + " : " + data.message);
 				}
 			}
 		}

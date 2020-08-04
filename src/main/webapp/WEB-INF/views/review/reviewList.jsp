@@ -39,6 +39,7 @@ table, th, td {
 					<th id="twowidth" style="background-color: #fff">상품명</th>
 					<th id="threewidth" style="background-color: #fff">후기내용</th>
 					<th id="twowidth" style="background-color: #fff">후기작성일</th>
+					<th id="twowidth" style="background-color: #fff">삭제하기</th>
 				</tr>
 		
 			<c:choose>
@@ -55,6 +56,7 @@ table, th, td {
 						<td id="twowidth">${dto.goodsname }</td>
 						<td id="threewidth">${dto.reviewcontent }</td>
 						<td id="twowidth" >${dto.reviewdate }</td>
+						<td id="twowidth" ><button onclick="chkDelete(${list[0].reviewuid })">삭제하기</button></td>
 					</tr>	
 					<% reviewCnt++; %>		
 					</c:when></c:choose>
@@ -67,7 +69,15 @@ table, th, td {
 </div>
 
     
-    
+<script>
+function chkDelete(reviewuid){
+	// 삭제 여부, 다시 확인 하고 진행하기
+	var r = confirm("삭제하시겠습니까?");
+	if(r){
+		location.href = '/sterre_test/review/reviewDeleteOk?reviewuid=' + reviewuid;
+	}
+}
+</script> 
    
 <style>
 

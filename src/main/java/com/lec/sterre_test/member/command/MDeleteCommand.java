@@ -12,14 +12,14 @@ public class MDeleteCommand implements MCommand {
 	@Override
 	public void execute(Model model) {
 		Map<String, Object> map = model.asMap();
-		int useruid = (Integer)map.get("useruid");
+		String username = (String)map.get("username");
 
 //		BWriteDAO dao = new BWriteDAO();
 //		int cnt = dao.deleteByUid(uid);
 //		model.addAttribute("result", cnt);
 		
 		MWriteDAO dao = C.sqlSession.getMapper(MWriteDAO.class);	
-		model.addAttribute("result", dao.mdeleteByUseruid(useruid));
+		model.addAttribute("result", dao.mdeleteByUseruid(username));
 		
 	}
 

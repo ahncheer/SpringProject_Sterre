@@ -62,15 +62,15 @@ public class MemberController {
 	}
 
 	@RequestMapping("/memView")
-	public String view(int useruid, Model model) {
-		model.addAttribute("useruid", useruid);
+	public String view(String username, Model model) {
+		model.addAttribute("username", username);
 		new MViewCommand().execute(model);
 		return "member/memView";
 	}
 	
 	@RequestMapping("/memUpdate")
-	public void update(int useruid, Model model) {
-		model.addAttribute("useruid", useruid);
+	public void update(String username, Model model) {
+		model.addAttribute("username", username);
 		new MSelectCommand().execute(model);
 //		return "member/update";
 	}

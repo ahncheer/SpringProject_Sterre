@@ -45,7 +45,7 @@ function chkSubmit(){
 <div id="container">
   <h1>&bull; 글 수정 &bull;</h1>
   
-  <form class="form" name="frm" action="writeOk" method="post" onsubmit="return chkSubmit()">
+  <form class="form" name="frm" action="updateOk" method="post" onsubmit="return chkSubmit()">
            <input type="hidden" name="${_csrf.parameterName }" value="${_csrf.token }" />  
   <input type="hidden" name="uid" value="${list[0].uid }"/>
   

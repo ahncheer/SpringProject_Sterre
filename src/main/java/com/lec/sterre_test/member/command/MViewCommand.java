@@ -14,7 +14,7 @@ public class MViewCommand implements MCommand {
 	@Override
 	public void execute(Model model) {
 		Map<String, Object> map = model.asMap();
-		int useruid = (Integer)map.get("useruid");
+		String username = (String)map.get("username");
 
 //		BWriteDAO dao = new BWriteDAO();
 //		BWriteDTO dto = dao.readByUid(uid);
@@ -23,7 +23,7 @@ public class MViewCommand implements MCommand {
 		MWriteDAO dao = C.sqlSession.getMapper(MWriteDAO.class);
 //		dao.incViewCnt(uid); // 조회수 증가
 		
-		MWriteDTO dto = dao.mselectByUseruid(useruid);  // 똑똑하게 BWriteDTO 를 리턴한다.
+		MWriteDTO dto = dao.mselectByUseruid(username);  // 똑똑하게 BWriteDTO 를 리턴한다.
 		model.addAttribute("list", Arrays.asList(dto));
 		
 		// Arrays.asList(new String[]{"aaa", "bbb"})

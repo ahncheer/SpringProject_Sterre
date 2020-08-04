@@ -20,15 +20,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>읽기 ${list[0].subject }</title> <!-- title에 글제목 넣기 -->
 </head>
-<script>
-function chkDelete(uid){
-	// 삭제 여부, 다시 확인 하고 진행하기
-	var r = confirm("삭제하시겠습니까?");
-	if(r){
-		location.href = 'deleteOk.do?uid=' + uid;
-	}
-}
-</script>
+
 <body>
   <%@ include file="../header.jsp" %>
 
@@ -61,7 +53,7 @@ function chkDelete(uid){
 
 
 <div style="text-align: center; padding-bottom: 30px;'">
-	<button onclick="location.href = '${pageContext.request.contextPath }/board/list'" id="form_button">목록보기</button>
+	<button onclick="location.href = '${pageContext.request.contextPath}/board/list'" id="form_button">목록보기</button>
 	
 	<c:choose>
 		<c:when test="${not empty user_id }">
@@ -74,6 +66,7 @@ function chkDelete(uid){
 		<button onclick="chkDelete(${list[0].uid })" id="form_button"> 삭제하기</button>
 		</c:when>
 	</c:choose>
+	
 </div>
 </div>
   <%@ include file="../footer.jsp" %>
@@ -295,7 +288,15 @@ textarea {
 
 </style>
 
-
+<script>
+function chkDelete(uid){
+	// 삭제 여부, 다시 확인 하고 진행하기
+	var r = confirm("삭제하시겠습니까?");
+	if(r){
+		location.href = 'deleteOk?uid=' + uid;
+	}
+}
+</script>
 
 
 

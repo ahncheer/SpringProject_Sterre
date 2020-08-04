@@ -12,7 +12,7 @@
 	</c:when>
 	<c:otherwise>
 	<script>
-		alert('삭제 성공');
+		//alert('삭제 성공');
 		location.href = "goodsList";  <%-- 삭제후에는 list 로 가자 --%>
 	</script>
 	</c:otherwise>

@@ -29,9 +29,18 @@
 			
 			<c:forEach var="dto" items="${list }">
 			
-				<c:choose><c:when test="${dto.goodsname eq param.goodsname}">
-					<div><img src ="${dto.goodspic1 }" style="width:180px; height: 240px;"/></div>
-				</c:when></c:choose>
+				<c:choose>
+				<c:when test="${dto.goodsname eq param.goodsname}">
+					<div>
+						<img src ="${dto.goodspic1 }" style="width:300px; height: 300px;" 
+						onerror="this.src = 'https://postfiles.pstatic.net/MjAyMDA4MDRfMTcx/MDAxNTk2NTUyNjU2NTMy.PNU4ccUc7DOcWSNeLU815Ug8_9mVEhwdaKtQ8xShwtkg.Dm2uUY1GTMD17WBqqCF4Sw5pG6X-baDYIXTm_BIgtwsg.PNG.ahncheer/logo.png?type=w966'"/>
+						
+						
+					
+					</div>
+					
+				</c:when>
+				</c:choose>
 					
 			</c:forEach>
 			

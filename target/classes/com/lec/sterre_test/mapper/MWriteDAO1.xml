@@ -28,7 +28,7 @@
 			useruid useruid, usertel usertel, userregdate userregdate, 
 			useralarm useralarm, userAdd userAdd
 		FROM users 
-		WHERE useruid=#{useruid}
+		WHERE username=#{username}
 	</select>
 	
 	<!-- 조회수 증가 -->
@@ -53,13 +53,13 @@
 		SET 
 		useremail = #{a.useremail}, password = #{a.password}, 
 		usertel = #{a.usertel}, useralarm = #{a.useralarm}, userAdd = #{a.userAdd}
-		WHERE useruid = #{param1}
+		WHERE username = #{a.username}
 	</update>
 	
 	
 	
 	<delete id="mdeleteByUseruid" flushCache="true">
-		DELETE FROM users WHERE useruid = #{useruid}
+		DELETE FROM users WHERE username = #{username}
 	</delete>
 
 <!-- 

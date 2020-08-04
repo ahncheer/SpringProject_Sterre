@@ -13,6 +13,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/CSS/common.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
 <title>글 목록</title>
 <style>
 table {width: 100%;}
@@ -26,49 +28,52 @@ table, th, td {
 <% 	
 	String username = request.getParameter("username");
  %>
- 	<% int reviewCnt = 0; %>
- <div class="content">
-	<div id="list">
+ 	<% int boardCnt = 0; %>
+
+<div id="list">
+
+		<table>
+			<tr>
+				<th style="background-color: #fff">UID</th>
+				<th id="threewidth" style="background-color: #fff">제목</th>
+				<th id="twowidth" style="background-color: #fff">작성자</th>
+				<th id="threewidth" style="background-color: #fff">내용</th>
+				<th style="background-color: #fff">조회수</th>
+				<th id="twowidth" style="background-color: #fff">등록일</th>
+			</tr>
 	
+		<c:choose>
+			<c:when test="${empty list || fn:length(list) == 0}">
+			</c:when>
+			<c:otherwise>
 			
-			
-			<table>
-				<tr>
-					<th style="background-color: #fff">후기번호</th>
-					<th id="twowidth" style="background-color: #fff">구매자명</th>
-					<th id="twowidth" style="background-color: #fff">상품명</th>
-					<th id="threewidth" style="background-color: #fff">후기내용</th>
-					<th id="twowidth" style="background-color: #fff">후기작성일</th>
-				</tr>
-		
+			<c:forEach var="dto" items="${list }">
 			<c:choose>
-				<c:when test="${empty list || fn:length(list) == 0}">
-				</c:when>
-				<c:otherwise>
-				
-				<c:forEach var="dto" items="${list }">
-				<c:choose>
-					<c:when test="${param.username eq dto.username}">
-					<tr>
-						<td>${dto.reviewuid }</td>
-						<td id="twowidth" >${dto.username }</td>
-						<td id="twowidth">${dto.goodsname }</td>
-						<td id="threewidth">${dto.reviewcontent }</td>
-						<td id="twowidth" >${dto.reviewdate }</td>
-					</tr>	
-					<% reviewCnt++; %>		
+					<c:when test="${param.username eq dto.name}">
+			<tr>
+				<td>${dto.uid }</td>
+				<td id="threewidth"><a href="${pageContext.request.contextPath }/board/view.do?uid=${dto.uid }">${dto.subject }</a></td>
+				<td id="twowidth">${dto.name }</td>
+				<td id="threewidth">${dto.subject }</td>
+				<td>${dto.viewCnt }</td>
+				<td id="twowidth" >${dto.regDate }</td>
+			</tr>	
+			<% boardCnt++; %>		
 					</c:when></c:choose>
-				</c:forEach>
-				</c:otherwise>
-			</c:choose>
-				<div style="width: 100%;padding: 5px;">등록된 후기 : <%=reviewCnt %>개 <br></div> 
-			</table>
-	</div>
+					
+			</c:forEach>
+			
+			</c:otherwise>
+		</c:choose>
+			<div style="width: 100%;padding: 5px;">등록된 글 : <%=boardCnt %>개 <br></div> 
+		</table>
+		<br>
 </div>
+</body>
+</html>
+
 
     
-    
-   
 <style>
 
 #threewidth {
@@ -78,7 +83,7 @@ word-break: break-all;
 }
 
 #twowidth {
-background-color: #ddd;
+background-color: #eee;
 width: 80px;
 word-break: break-all;
 }
@@ -108,11 +113,7 @@ word-break: break-all;
 	color:#333;
 }
 
-</style>   
-    
-</body>
-</html>
-
+</style>
 
 
 

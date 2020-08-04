@@ -24,23 +24,20 @@ table, th, td {
 </style>
 </head>
 <body>
-	
 <% 	
 	String username = request.getParameter("username");
  %>
+	<% int buyCnt = 0; %>
  <div class="content">
 	<div id="list">
 	
-			<h3>주문 목록</h3>
-			<hr>
 			<table>
 				<tr>
-					<th>주문번호</th>
-					<th>구매자명</th>
-					<th>상품명</th>
-					<th>구매개수</th>
-					<th>구매일</th>
-					<th>후기</th>
+					<th style="background-color: #fff">주문번호</th>
+					<th style="background-color: #fff">구매자명</th>
+					<th id="threewidth" style="background-color: #fff">상품명</th>
+					<th style="background-color: #fff">구매개수</th>
+					<th id="threewidth" style="background-color: #fff">구매일</th>
 					
 				</tr>
 		
@@ -50,26 +47,66 @@ table, th, td {
 				<c:otherwise>
 				
 				<c:forEach var="dto" items="${list }">
-					<c:choose>
+				<c:choose>
 					<c:when test="${param.username eq dto.username}">
 					<tr>
 						<td>STERRE0${dto.buyuid }</td>
-						<td>${dto.username }</td>
+						<td id="threewidth">${dto.username }</td>
 						<td>${dto.goodsname }</td>
 						<td>${dto.buynum }</td>
-						<td>${dto.buydate }</td>
-						<td><a href="${pageContext.request.contextPath }/review/reviewWrite?username=${dto.username}&goodsname=${dto.goodsname }">후기 작성</a></td>
-					</tr>			
-					</c:when></c:choose>
+						<td id="threewidth">${dto.buydate }</td>
+					</tr>	
+					<% buyCnt++; %>	
+					</c:when></c:choose>	
 				</c:forEach>
 				</c:otherwise>
 			</c:choose>
-	
+					<div style="width: 100%;padding: 5px;">주문 목록 : <%=buyCnt %>개 <br></div> 
 			</table>
 	</div>
 </div>
 
     
+<style>
+
+#threewidth {
+background-color: #ddd;
+width: 230px;
+word-break: break-all;
+}
+
+#twowidth {
+background-color: #ddd;
+width: 80px;
+word-break: break-all;
+}
+
+
+ table,  th, td{
+ table-layout:fixed; 
+	border:1px solid #666;
+	border-collapse:collapse;
+	font-size: 10px;
+	/* overflow:scroll; */
+
+	
+}
+ thead th{
+	padding:3px 5px;
+	text-transform:uppercase;
+	color:#333;
+	width: 40px;
+}
+ tbody td, tbody th{
+	padding:5px 10px;
+	background:#eee;
+	width: 40px;
+}
+ tbody th{
+	color:#333;
+}
+
+</style>
     
     
     

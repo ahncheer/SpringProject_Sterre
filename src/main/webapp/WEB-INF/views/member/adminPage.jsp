@@ -15,25 +15,25 @@
   
 <hr>
 
-<h3>유저 조회</h3>
+<h3>유저 전체 조회</h3>
 <div id="admindiv">
 <c:import url="/member/memAllList" />
 </div>
 
 <hr style="width : 50%;margin: 30px;    margin-left: 25%;">
-<h3>상품 조회</h3>
+<h3>상품 전체 조회</h3>
 <div id="admindiv">
 <c:import url="/goods/goodsAllList" />
 </div>
 
 <hr style="width : 50%;margin: 30px;    margin-left: 25%;">
-<h3>구매 조회</h3>
+<h3>구매 전체 조회</h3>
 <div id="admindiv">
 <c:import url="/buy/buyAllList" />
 </div>
 
 <hr style="width : 50%;margin: 30px;    margin-left: 25%;">
-<h3>후기 조회</h3>
+<h3>후기 전체 조회</h3>
 <div id="admindiv">
 <c:import url="/review/reviewAdminList" />
 </div>
@@ -43,6 +43,8 @@
 <div id="admindiv">
 <c:import url="/board/BoardAllList" />
 </div>
+
+  <%@ include file="../footer.jsp" %>
 
 </body>
 </html>

@@ -9,6 +9,12 @@ body {
   padding-bottom: 3rem;
   color: #5a5a5a;
 }
+html,
+.root {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
 
 
 /* CUSTOMIZE THE CAROUSEL
@@ -161,26 +167,8 @@ h2 {
 	}
 	
 }
-html,
-.root {
-  padding: 0;
-  margin: 0;
-  font-size: 18px;
-}
 
 
-
-
-
-
-
-body {
-  font: menu;
-  font-size: 1rem;
-  line-height: 1.4;
-  padding: 0;
-  margin: 0;
-}
 section {
   padding-top: 1rem;
   width: 80%;

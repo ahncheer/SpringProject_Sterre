@@ -15,18 +15,64 @@
 </head>
 <body>
   <%@ include file="../header.jsp" %>
+  <h1 style="text-align: center;color: #777" class="text-shadow-pop-br">my page</h1>
 
-  <h1 style="text-align: center;color: #777" class="text-shadow-pop-br"><b>myPage</b></h1>
-
-<div style="background-color: #ddd; width : 80%; margin-left:10%; height: 300px">
-	<c:import url="/buy/buyList?username=${user_id }" />
-
+<hr style="width : 50%; margin: 30px;    margin-left: 25%;">
+<h3>구매내역 조회</h3>
+<div id="admindiv">
+<c:import url="/buy/buyList?username=${user_id }" />
 </div>
 
-
-<div style="background-color: #ddd; width : 80%;margin-left:10%; height: 300px">
-	<c:import url="/review/reviewList?username=${user_id }" />
+<hr style="width : 50%; margin: 30px;    margin-left: 25%;">
+<h3>작성한 후기 조회</h3>
+<div id="admindiv">
+<c:import url="/review/reviewList?username=${user_id }" />
 </div>
+
+<hr style="width : 50%; margin: 30px;    margin-left: 25%;">
+<h3>작성한 게시물 조회</h3>
+<div id="admindiv">
+<c:import url="/board/boardList?username=${user_id }" />
+</div>
+<br><br><br>
+
+   <%@ include file="../footer.jsp" %>
+ 
 
 </body>
 </html>
+
+
+
+
+<style>
+#admindiv {
+
+padding: 10px;
+width: 100%;
+height : 400px;
+overflow: auto;
+background-color: aliceblue;
+border: 2px dotted #46bdc6;
+border-radius: 20px;
+padding: 20px;
+
+}
+
+  #admindiv::-webkit-scrollbar {
+    width: 15px;
+  }
+  #admindiv::-webkit-scrollbar-thumb {
+    background-color: #2f3542;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 4px solid transparent;
+    border-left: 3px solid #fff00;
+  }
+ #admindiv::-webkit-scrollbar-track {
+    background-color: grey;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+  }
+
+</style>

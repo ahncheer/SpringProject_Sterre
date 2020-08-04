@@ -61,16 +61,16 @@ function chkDelete(uid){
 
 
 <div style="text-align: center; padding-bottom: 30px;'">
-	<button onclick="location.href = 'list.do'" id="form_button">목록보기</button>
+	<button onclick="location.href = '${pageContext.request.contextPath }/board/list'" id="form_button">목록보기</button>
 	
 	<c:choose>
 		<c:when test="${not empty user_id }">
-			<button onclick="location.href = 'write.do'" id="form_button">신규등록</button>
+			<button onclick="location.href = '${pageContext.request.contextPath }/board/write'" id="form_button">신규등록</button>
 		</c:when>
 	</c:choose>
 	<c:choose>
 		<c:when test="${list[0].name  eq user_id }">
-		<button onclick="location.href='update.do?uid=${list[0].uid }'" id="form_button">수정하기</button>
+		<button onclick="location.href='${pageContext.request.contextPath }/board/update?uid=${list[0].uid }'" id="form_button">수정하기</button>
 		<button onclick="chkDelete(${list[0].uid })" id="form_button"> 삭제하기</button>
 		</c:when>
 	</c:choose>

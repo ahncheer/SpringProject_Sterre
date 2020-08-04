@@ -56,7 +56,7 @@ table, th, td {
 					<li>
 						<ul>
 							<li>${dto.uid }</li>
-							<li class="left"><a href="view.do?uid=${dto.uid }">${dto.subject }</a></li>
+							<li class="left"><a href="${pageContext.request.contextPath }/board/view.do?uid=${dto.uid }">${dto.subject }</a></li>
 							<li style="word-break: break-all;">${dto.regDate }</li>
 							<li>${dto.name }</li>
 							<li>${dto.viewCnt }</li>
@@ -69,8 +69,17 @@ table, th, td {
 
 		</ul>
 		<br><br>
-	<button onclick="location.href='write'"
+		
+		
+		
+	
+		
+		<c:choose>
+		<c:when test="${not empty user_id }">
+			<button onclick="location.href='${pageContext.request.contextPath }/board/write'"
 		id="form_button" class="btn success" style="float : right">신규등록</button>
+		</c:when>
+	</c:choose>
 	</div>
 	<br><br>
 <br><br><br>

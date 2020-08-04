@@ -22,6 +22,7 @@ table, th, td {
 }
 </style>
 </head>
+<!--  헤더에서 바로 넘어오는 페이지 !! -->
 <body>
 	<%@ include file="../header.jsp" %>
 	
